@@ -99,7 +99,7 @@ function showWelcome() {
                             posdesc = "上有天堂，下有苏杭。";
                             break;
                         case "无锡市":
-                            posdese = "想在春天看鼋头渚的樱花。";
+                            posdesc = "想去看春天鼋头渚的樱花。";
                             break;
                         default:
                             posdesc = "散装是必须要散装的。";
