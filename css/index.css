@@ -1473,7 +1473,7 @@ table td {
   vertical-align: middle;
 }
 *::selection {
-  background: #3ff;
+  background: #00c4b6;
   color: #f7f7f7;
 }
 button {
@@ -1535,7 +1535,7 @@ img[data-lazy-src].error {
 blockquote {
   margin: 0 0 20px;
   padding: 12px 15px;
-  border-left: 3px solid #404040;
+  border-left: 3px solid #fccb16;
   background-color: var(--blockquote-bg);
   color: var(--blockquote-color);
 }
@@ -2839,7 +2839,7 @@ h1.page-title + .tag-cloud-list {
   color: #fccb16;
 }
 #aside-content #card-toc .toc-content .toc-link.active {
-  background: #ffd089;
+  background: #00c4b6;
   color: #fff;
 }
 #aside-content :only-child > .card-widget {
