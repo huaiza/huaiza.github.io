@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ciallo</title>
   
-  
+  <subtitle>Ciallo.tech</subtitle>
   <link href="http://ciallo.tech/atom.xml" rel="self"/>
   
   <link href="http://ciallo.tech/"/>
