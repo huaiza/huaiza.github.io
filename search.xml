@@ -1,189 +1,669 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>C语言基础：结构体</title>
-      <link href="/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/"/>
-      <url>/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/</url>
-      
-        <content type="html"><![CDATA[<h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1><p>目录：</p><ol><li>结构体的概念</li><li>结构体类型的定义</li><li>结构体类型的嵌套定义</li><li>结构体类型变量</li><li>结构体类型变量的定义</li><li>结构体类型变量的初始化</li><li>结构体类型变量的引用</li><li>注意事项1</li><li>注意事项2</li><li>注意事项3</li><li>注意事项4</li><li>相关说明</li><li>结构体数组</li><li>结构体数组的定义</li><li>结构体数组的初始化</li><li>分行初始化</li><li>顺序初始化</li><li>结构体数组的访问</li><li>结构体数组应用举例</li><li>结构体与指针</li><li>指向结构体类型数据的指针</li><li>指向结构体变量的指针</li><li>指向结构体数组的指针</li><li>结构体变量和指向结构体的指针做函数参数</li><li>结构体变量做参数（值传递）</li><li>结构体数组做函数参数</li><li>函数返回值是结构体类型<h2 id="1-结构体的概念"><a href="#1-结构体的概念" class="headerlink" title="1.结构体的概念"></a>1.结构体的概念</h2></li></ol><p><strong>结构体</strong>是一种<u>构造数据类型</u></p><blockquote><p><em>数组也是一种构造数据类型（由多个数组合在一起），结构体可以组合不同类型的数</em></p></blockquote><p>用途：把<strong>不同类型</strong>的数据组合成一个整体————<strong>自定义</strong>数据类型。</p><h2 id="2-结构体类型的定义"><a href="#2-结构体类型的定义" class="headerlink" title="2.结构体类型的定义"></a>2.结构体<u>类型</u>的定义</h2><blockquote><p>结构体先定义类型，再定义变量</p></blockquote><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128112317.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">语法格式与实例</div></center><blockquote><ol><li>关键字<strong>struct</strong>代表定义的是结构体类型。</li><li>注意最后的分号。</li><li>在之后定义变量时要使用<strong>类型名</strong>，注意类型名，在实例中，<strong>类型名不是”student”而是”struct student”!!!</strong></li><li>结构体中的成员可以是普通类型，也可以是构造类型（如数组）。因此数组可以作为成员名。</li></ol></blockquote><h3 id="结构体类型的嵌套定义"><a href="#结构体类型的嵌套定义" class="headerlink" title="结构体类型的嵌套定义"></a>结构体类型的嵌套定义</h3><p>之后结构体类型的定义可以利用之前所定义过的结构体类型</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128143838.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">嵌套定义的例子</div></center><h2 id="3-结构体类型变量"><a href="#3-结构体类型变量" class="headerlink" title="3. 结构体类型变量"></a>3. 结构体类型变量</h2><h3 id="1-结构体类型变量的定义"><a href="#1-结构体类型变量的定义" class="headerlink" title="1. 结构体类型变量的定义"></a>1. 结构体类型变量的定义</h3><p>方法一：使用已经<strong>定义好的结构体类型</strong>定义变量<br>方法二：在定义结构体类型的同时定义变量<br>方法三：直接定义结构体变量</p><blockquote><p>在这三种中，通常采用第一种。</p></blockquote><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128144424.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">方法一实例：struct student为定义好的结构体类型，在其之后定义了fresher,junior两个变量</div></center><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128144621.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">方法二实例，前方为结构体类型的定义，之后所接的即为变量，之后若想继续定义变量，则需要用方法一</div></center><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128144856.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">方法三实例，没有定义结构体的类型，直接定义了变量。用这种方式，之后无法继续使用此类型定义变量，只能在这一行添加。</div></center><h3 id="2-结构体类型变量的初始化"><a href="#2-结构体类型变量的初始化" class="headerlink" title="2. 结构体类型变量的初始化"></a>2. 结构体类型变量的初始化</h3><p>与结构体类型变量的定义相对应，其有三种情形：</p><ol><li><p>先定义结构体类型，然后定义结构体变量，然后写上了一些内容（初始化）</p></li><li><p>定义结构体类型的同时定义变量，并且对它进行初始化</p></li><li><p>不定义结构体类型，直接定义结构体类型的变量，并且对它们初始化</p></li></ol><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128145726.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">情形一，注意不能整体赋值！</div></center><blockquote><ol><li><em><strong>结构体变量不允许整体赋值</strong></em></li><li>初始化时各成员初值要与数据类型一致！</li></ol></blockquote><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128150350.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">情形二，同理，不能对结构体变量做整体的赋值运算</div></center><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128150734.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">情形三实例，不定义结构体类型，直接定义变量并初始化</div></center><h3 id="3-结构体类型变量的引用"><a href="#3-结构体类型变量的引用" class="headerlink" title="3. 结构体类型变量的引用"></a>3. 结构体类型变量的<strong>引用</strong></h3><p>一般形式： <strong>结构体变量名.成员名</strong></p><p>注意事项：</p><blockquote><p>不能将结构体变量作为一个整体进行输入和输出<br>不能将两个结构体变量进行整体比较<br><strong>可以</strong>将一个结构体变量<strong>整体赋值</strong>给另一个结构体变量<br>结构体嵌套时逐级引用</p></blockquote><p>引用实例：</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128152357.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">赋值运算，自加运算，判断</div></center><h4 id="注意事项1："><a href="#注意事项1：" class="headerlink" title="注意事项1："></a>注意事项1：</h4><p><strong>结构体变量不能整体输入和输出和赋值！</strong></p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128152745.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">需要一一对应地输出</div></center><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128152931.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">不能整体输入，注意要加取地址符号，但是数组（char类型）的名字就是地址（首地址）</div></center><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128153623.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">结构体变量不能整体赋值。注意第二行，作为数组名，不能出现在赋值等于号的左边（因为它是常量），因此字符串的拷贝用strcpy，第六行的地址同理</div></center><h4 id="注意事项2："><a href="#注意事项2：" class="headerlink" title="注意事项2："></a>注意事项2：</h4><p>不能对结构体变量做是否相等的运算。<br>需要比较时，则将里面的每一个字段一一比较以确认相等。</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128154119.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">通常此内容对应到数据库知识。注意第二行，对两个字符串进行比较时使用strcmp</div></center><h4 id="注意事项3（可以）："><a href="#注意事项3（可以）：" class="headerlink" title="注意事项3（可以）："></a>注意事项3（可以）：</h4><p>可以把一个结构体变量整体赋值给另一个！</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128154705.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">可以将stu1的所有信息赋值给stu2</div></center><h4 id="注意事项4"><a href="#注意事项4" class="headerlink" title="注意事项4"></a>注意事项4</h4><p>结构体嵌套时逐级引用！</p><p>结构体类型嵌套定义，若想引用该结构体中所嵌套的另一个结构体类型的成员，中的信息，要逐级引用。</p><p>如：变量名.成员名.嵌套的结构体的成员名</p><p>有几层便要用几层的引用。</p><h3 id="相关说明："><a href="#相关说明：" class="headerlink" title="相关说明："></a>相关说明：</h3><blockquote><p>注意：结构体类型与结构体变量不可混淆！<br>结构体成员名与程序中变量名可相同，互不影响！<br>结构体可复合！</p></blockquote><p>关于结构体复合：<br>在结构体类型的定义内再定义另一个结构体类型<br>与嵌套的不同之处：它真的把结构体嵌进去了！</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128155854.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">结构体的复合</div></center><h2 id="4-结构体数组"><a href="#4-结构体数组" class="headerlink" title="4. 结构体数组"></a>4. 结构体数组</h2><p>结构体与数组的联系：</p><blockquote><p>在结构体的成员中有数组（如char name[10])<br>把数组放在外面，把结构体放在里面，便生成结构体数组。</p></blockquote><h3 id="结构体数组的定义"><a href="#结构体数组的定义" class="headerlink" title="结构体数组的定义"></a>结构体数组的定义</h3><p>类似于结构体变量定义的三种方法，结构体数组的定义有三种方法：</p><p>一、使用已经定义好的结构体类型定义数组</p><p>例子：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">stu</span>[2];</span></span><br></pre></td></tr></table></figure><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/20230128161957.png"    height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">结构体数组的分配空间</div></center><p>二、在定义结构体类型的同时定义数组</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;stu[<span class="number">2</span>];</span><br></pre></td></tr></table></figure><p>三、直接定义结构体数组</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;stu[<span class="number">2</span>];</span><br></pre></td></tr></table></figure><h3 id="2-结构体数组的初始化"><a href="#2-结构体数组的初始化" class="headerlink" title="2. 结构体数组的初始化"></a>2. 结构体数组的初始化</h3><h4 id="分行初始化"><a href="#分行初始化" class="headerlink" title="分行初始化"></a>分行初始化</h4><p>所谓分行，不是局限于行数，而是初始化时，使用了多组大括号。<br>只要每个初始化信息外有大括号，就是分行初始化。</p><p>例子：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">stu</span>[]=</span>&#123;&#123;<span class="number">100</span>,<span class="string">&quot;Wang Lin&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">20</span>&#125;,</span><br><span class="line">&#123;<span class="number">101</span>,<span class="string">&quot;Li Gang&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">19</span>&#125;,</span><br><span class="line">&#123;<span class="number">110</span>,<span class="string">&quot;Liu Yan&quot;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="number">19</span>&#125;&#125;;</span><br></pre></td></tr></table></figure><blockquote><p>全部初始化时维数（第八号方括号内的数）可省</p></blockquote><h4 id="顺序初始化"><a href="#顺序初始化" class="headerlink" title="顺序初始化"></a>顺序初始化</h4><p>例子：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>]</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">stu</span>[]=</span>&#123;<span class="number">100</span>,<span class="string">&quot;Wang Lin&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">20</span>,<span class="number">101</span>,<span class="string">&quot;Lin Gang&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">19</span>,<span class="number">110</span>,<span class="string">&quot;liu Yan&quot;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="number">19</span>&#125;;</span><br></pre></td></tr></table></figure><blockquote><p>与分行初始化的区别：每个人的信息都用逗号隔开，外面没有大括号了。</p></blockquote><h3 id="结构体数组元素的访问"><a href="#结构体数组元素的访问" class="headerlink" title="结构体数组元素的访问"></a>结构体数组元素的访问</h3><p>语法格式： 结构体数组名[下标].成员名<br>例：<br>让一号同学的年龄加一：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stu[<span class="number">1</span>].age++;</span><br></pre></td></tr></table></figure><p>让零号学生姓名为ZhaoDa</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strcpy</span>(stu[<span class="number">0</span>].name,<span class="string">&quot;ZhaoDa&quot;</span>);</span><br></pre></td></tr></table></figure><blockquote><p>作为数组（常量），因此不能用赋值运算，使用strcpy，把字符串拷贝到数组中</p></blockquote><h3 id="结构体数组应用举例："><a href="#结构体数组应用举例：" class="headerlink" title="结构体数组应用举例："></a>结构体数组应用举例：</h3><p>选举：十三人中，三人为候选人，十人为选举人，选举三人中的一人。每个人那一张纸条，上面写上”Li”或”Wang”或”Zhang”投票。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">person</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">int</span> count;</span><br><span class="line">&#125;leader[<span class="number">3</span>]=&#123;<span class="string">&quot;Li&quot;</span>,<span class="number">0</span>,<span class="string">&quot;Zhang&quot;</span>,<span class="number">0</span>,<span class="string">&quot;Wang&quot;</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line">    <span class="type">char</span> leader_name[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,leader_name);</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">3</span>;j++)</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">strcmp</span>(leader_name,leader[j].name)==<span class="number">0</span>)</span><br><span class="line">        leader[j].count++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%5s:%d\n&quot;</span>,leader[i].name,leader[i].count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h2 id="5-指向结构体类型数据的指针"><a href="#5-指向结构体类型数据的指针" class="headerlink" title="5.指向结构体类型数据的指针"></a>5.指向结构体类型数据的指针</h2><blockquote><p>1.指向结构体变量的指针<br>2.指向结构体数组的指针<br>3.结构体变量和指向结构体的指针做函数参数</p></blockquote><h3 id="指向结构体变量的指针"><a href="#指向结构体变量的指针" class="headerlink" title="指向结构体变量的指针"></a>指向结构体变量的指针</h3><p>引例</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="type">int</span> *p=&amp;i;</span><br><span class="line">i=<span class="number">10</span>;</span><br><span class="line"><span class="comment">/* 上面一句等同于 *p=10; */</span></span><br></pre></td></tr></table></figure><p>由此引出：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">stu1</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> *<span class="title">q</span>=</span>&amp;stu1;</span><br><span class="line">stu1.age=<span class="number">18</span>;</span><br><span class="line"><span class="comment">/* 等同于（*q).age=18; */</span></span><br></pre></td></tr></table></figure><blockquote><p>注：点号为单目运算符，结合性为自右向左，即可能出现忽略左侧星号*的情况。所以要带上小括号。</p></blockquote><p>由于写的时候容易有歧义、或者要带括号，较为麻烦，<br>因此可以用一种新的写法：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">q-&gt;age=<span class="number">18</span>;</span><br><span class="line"><span class="comment">/* 相当于 (*q).age=18 */</span></span><br></pre></td></tr></table></figure><p>尤其当之后学了链表后，都是用这种方法，基本上不再用前者。</p><p>定义      struct 结构体名 *指针变量；<br>赋初值    指针变量名=&amp;结构体变量；<br>访问成员  设p为指向结构体变量的指针：<br>          访问方式一：(*p).成员名<br>          访问方式二：p-&gt;成员名</p><h3 id="指向结构体数组的指针"><a href="#指向结构体数组的指针" class="headerlink" title="指向结构体数组的指针"></a>指向结构体数组的指针</h3><p>定义一个数组，定义一个指针指向数组的第一个地址，指针P就可以通过自加运算访问第一、二、三······个。</p><p>例：有3个学生的信息，放在结构体数组中，输出全部学生的信息</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">/*结构体数组的定义与初始化*/</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;stu[<span class="number">3</span>]=&#123;&#123;<span class="number">10101</span>,<span class="string">&quot;Li Lin&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">18</span>&#125;,&#123;<span class="number">10102</span>,<span class="string">&quot;Zhang Fun&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">19</span>&#125;,&#123;<span class="number">10104</span>,<span class="string">&quot;Wang Min&quot;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="number">20</span>&#125;&#125;;<span class="comment">/*分行初始化*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> *<span class="title">p</span>;</span></span><br><span class="line">    <span class="comment">/*定义了一个指针P，让P等于数组的名字，指向数组的首地址*/</span></span><br><span class="line">    <span class="keyword">for</span>(p=stu;p&lt;stu+<span class="number">3</span>;p++)</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">&quot;%d%s%c%d\n&quot;</span>,p-&gt;num,p-&gt;name,p-&gt;sex,p-&gt;age);</span><br><span class="line">    <span class="comment">/*都用箭头，看起来很统一*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="结构体变量和指向结构体的指针作函数参数"><a href="#结构体变量和指向结构体的指针作函数参数" class="headerlink" title="结构体变量和指向结构体的指针作函数参数"></a>结构体变量和指向结构体的指针作函数参数</h3><h4 id="1-结构体变量作参数（值传递）"><a href="#1-结构体变量作参数（值传递）" class="headerlink" title="1. *结构体变量作参数（值传递）"></a>1. *结构体变量作参数（值传递）</h4><p>例：定义一个复数类型的结构体，通过函数调用，求两个复数的和。</p><blockquote><p>复数包括实部、虚部，结构体变量可以带多个成员。因此可以定义一个复数的结构体类型，带三个成员：实部、虚部和模。</p></blockquote><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">complex_t</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">double</span> real;</span><br><span class="line">    <span class="type">double</span> imag;</span><br><span class="line">    <span class="type">double</span> modular;</span><br><span class="line">&#125;;<span class="comment">/*结构体类型的定义*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">add</span><span class="params">(<span class="keyword">struct</span> <span class="type">complex_t</span>,<span class="keyword">struct</span> <span class="type">complex_t</span>)</span>;<span class="comment">/*函数的声明，声明只要含有参数的数量以及类型，因此不必将参数的名字写在上面*/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">complex_t</span> <span class="title">c1</span>.<span class="title">c2</span>;</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf&quot;</span>,&amp;c1.real,&amp;c1.imag);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf&quot;</span>,&amp;c2.real,&amp;c2.imag);<span class="comment">/*分别读入C1C2的实部虚部*/</span></span><br><span class="line">    add(c1,c2);<span class="comment">/*调用add函数*/</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">add</span><span class="params">(<span class="keyword">struct</span> <span class="type">comples_t</span> c1,<span class="keyword">struct</span> <span class="type">complex_t</span> c2)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">comples_t</span> <span class="title">c</span>;</span></span><br><span class="line">    c.real=c1.real+c2.real;</span><br><span class="line">    c.imag=c1.imag+c2.imag;</span><br><span class="line">    c.modular=<span class="built_in">sqrt</span>(c.real*c.real+c.imag*c.imag);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lf,%lf,%lf\n&quot;</span>,c.real,c.imag,c.modular);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="结构体数组作为函数参数"><a href="#结构体数组作为函数参数" class="headerlink" title="结构体数组作为函数参数"></a>结构体数组作为函数参数</h4><p>（例题：学生的记录由学号和成绩组成，N名学生的数据已在主函数中放入结构体数组s中，请编写函数fun，其功能是：把分数最低的学生数据放在h所指的数组中。<em>注意：分数最低的学生可能不止一个，函数返回分数最低的学生的人数。</em>）</p><p>通过结构体数组作为参数的形式实现排序</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">SortData</span><span class="params">(<span class="keyword">struct</span> student *pstu,<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">temp</span>;</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)</span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n<span class="number">-1</span>-i;j++)</span><br><span class="line">    <span class="keyword">if</span>(pstu[j].sum&lt;pstu[j+<span class="number">1</span>].sum)</span><br><span class="line">    &#123;</span><br><span class="line">        temp=pstu[j];</span><br><span class="line">        pstu[j]=pstu[j+<span class="number">1</span>];</span><br><span class="line">        pstu[j+<span class="number">1</span>]=temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*冒泡排序算法*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="函数的返回值是结构体类型"><a href="#函数的返回值是结构体类型" class="headerlink" title="函数的返回值是结构体类型"></a>函数的返回值是结构体类型</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="type">complex_t</span> <span class="title function_">add</span><span class="params">(<span class="keyword">struct</span> <span class="type">complex_t</span> c1,<span class="keyword">struct</span> <span class="type">complex_t</span> c2)</span><span class="comment">/*可以看出，函数的返回值是结构体类型*/</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">complex_t</span> <span class="title">c</span>;</span></span><br><span class="line">    c.real=c1.real+c2.real;</span><br><span class="line">    c.imag=c1.imag+c2.imag;</span><br><span class="line">    c.modular=<span class="built_in">sqrt</span>(c.real*c.real+c.imag*c.imag);</span><br><span class="line">    <span class="keyword">return</span> c;<span class="comment">/*返回C（多值返回），尽管只返回一个C，但C可以待会多个东西*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>主函数的写法：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">complex_t</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">double</span> real;</span><br><span class="line">    <span class="type">double</span> imag;</span><br><span class="line">    <span class="type">double</span> modular;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> <span class="type">complex_t</span> <span class="title function_">add</span><span class="params">(<span class="keyword">struct</span> <span class="type">complex_t</span>,<span class="keyword">struct</span> <span class="type">complex_t</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">complex_t</span> <span class="title">c</span>,<span class="title">c1</span>,<span class="title">c2</span>;</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf&quot;</span>,&amp;c1.real,&amp;c1.imag);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf&quot;</span>,&amp;c2.real,&amp;c2.imag);</span><br><span class="line">    c=add(c1,c2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lf,%lf,%lf\n&quot;</span>,c.real,c.imag,c.moudlar);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;<span class="comment">/*主函数所做的事：数据的输入、函数的调用、数据的输出*/</span></span><br></pre></td></tr></table></figure><p>例：</p><blockquote><p>设一个班级有三十个人，学生信息包括姓名、学号外、三科成绩。利用函数的返回值找出总分最高分和最低的学生的信息。</p></blockquote><p>函数只能返回一个回来，如何解决这个问题——可以用指针带回来一些值</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 30</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];<span class="comment">/*学生姓名*/</span></span><br><span class="line">    <span class="type">long</span> num;<span class="comment">/*学号*/</span></span><br><span class="line">    <span class="type">float</span> score[<span class="number">3</span>];<span class="comment">/*三科考试成绩*/</span></span><br><span class="line">    <span class="type">float</span> sum;<span class="comment">/*总成绩*/</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> student <span class="title function_">max</span><span class="params">(<span class="keyword">struct</span> student [],<span class="keyword">struct</span> student *<span class="comment">/*用这个指针带回来一些值*/</span>,<span class="type">int</span>)</span>;<span class="comment">/*在函数声明时只要写类型*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">inputdata</span><span class="params">(<span class="keyword">struct</span> student stu[],<span class="type">int</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">inputdata</span><span class="params">(<span class="keyword">struct</span> student stu[],<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)<span class="comment">/*一重循环*/</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s %ld %f %f %f&quot;</span>,stu[i].name,&amp;stu[i].num,&amp;stu[i].score[<span class="number">0</span>],&amp;stu[i].score[<span class="number">1</span>],&amp;stu[i].score[<span class="number">2</span>]);</span><br><span class="line">        stu[i].sum=(stu[i].score[<span class="number">0</span>]+stu[i].scpre[<span class="number">1</span>]+stu[i].scpre[<span class="number">2</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">struct</span> student <span class="title function_">max</span><span class="params">(<span class="keyword">struct</span> student stu[],<span class="keyword">struct</span> student *s,<span class="type">int</span> n)</span><span class="comment">/*第一个参数为结构体数组，第二个参数为结构体指针，结构体指针可以用来返回最小值）*/</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">t</span>;</span></span><br><span class="line">    <span class="type">int</span> i;<span class="comment">/*会出现循环，所以定义i*/</span></span><br><span class="line">    <span class="type">float</span> m,p;<span class="comment">/*存放最高分最低分的分值*/</span></span><br><span class="line">    m=p=stu[<span class="number">0</span>].sum;<span class="comment">/*让分值m,p都等于0号同学的sun*/</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(m&lt;=stu[i].sum)</span><br><span class="line">        &#123;</span><br><span class="line">            m=stu[i].sum;</span><br><span class="line">            t=stu[i];</span><br><span class="line">        &#125;<span class="comment">/*找最高分*/</span></span><br><span class="line">        <span class="keyword">if</span>(p&gt;=stu[i].sum)</span><br><span class="line">        &#123;</span><br><span class="line">            p=stu[i].sum</span><br><span class="line">            *s=stu[i];<span class="comment">/*用主函数的指针，因为return时只能返回一个值*/</span></span><br><span class="line">        &#125;<span class="comment">/*找最低分*/</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> t;<span class="comment">/*只能返回一个值，最低分的人的信息用指针S带回*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">st</span>[<span class="title">N</span>],<span class="title">maxst</span>,<span class="title">minst</span>;</span></span><br><span class="line">    inputdata(st,N);</span><br><span class="line">    maxst=max(st,&amp;minst,N);<span class="comment">/*定义minst,指针S指向minst的地址,则可以用*s带回需要的值*/</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;最高分学生信息：\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s %ld %.2f %.2f %.2f %.2f\n&quot;</span>,maxst.name,maxst.num,maxst.score[<span class="number">0</span>],maxst.score[<span class="number">1</span>],maxst.scpre[<span class="number">2</span>],maxst.sum);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;最低分学生信息：\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s %ld %.2f %.2f %.2f %.2f\n&quot;</span>,minst.name,minst.num,minst.score[<span class="number">0</span>],minst.score[<span class="number">1</span>],minst.score[<span class="number">2</span>],minst.sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>建站小记</title>
+    <url>/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="本站梗概"><a href="#本站梗概" class="headerlink" title="本站梗概"></a>本站梗概</h1><p>    本站是博主的个人博客，基于Hexo搭建，采用Butterfly主题，网站的文件托管在Github仓库和Vercel上。在搭建过程中主要参考了<a href="https://www.fomal.cc/">Fomalhaut🥝</a> 的文章及发布在B站的同步视频。
+    </p>
+<h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p> &gt;  12月16日晚，博主打开了许久未用的收音机。在晴朗的晚上，收音机能接收到的短波信号比以往更强。我检索到了一个清晰的日语频道，出于好奇，我在网络上 搜索该频道，试图查找它的相关信息。在网上冲浪期间，我发现了不少个人博客，博主在其中分享生活随笔与知识教程。由此激发的兴趣让我也搭建一个个人博客。</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><blockquote>
+<p> 必应搜索关键词“制作个人博客”的显示的第一个结果便是一篇知乎文章。通过它的指导，我完成了Git的安装，电脑与Github的连结。<br> 在这之后，我便主要参考Fomalhaut的教程，完成Hexo的搭建与主题的下载安装，将静态博客挂载到Github Pages上，并将文件托管在Vercel上。<br> 目前的网站文件是我第二次重新做的。一开始网站文件在我上传时报错了，而报错的地方是某两个我从来没改动过的文件，当时尝试无果，无法解决（之后再次实践才发现是配置文件的某个内容不准确导致的），并且github的库中也没有完整的根目录文件夹，只有“.deploy_git”文件夹中的内容。于是我只好删除重做。<br> （事实证明备份文件至关重要）（不是</p>
+</blockquote>
+<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><blockquote>
+<p>图床，指用于储存图片的服务器。这是整个搭建过程中最折磨我的地方。</p>
+<p>首先按照教程建立的基于Github仓库的图床延迟太大，就算用免费的cdn加速，加载一张图片也要十几秒。由于当时还没有域名，无法把图床部署在Vercel上。于是我又参考第三种方法，注册了Cloudflare，但是无法通过网站给出的域名打开图片。</p>
+<p>于是，我尝试国内的免费图床。由于服务器在国内，免费图床的加载速度极快。但是，免费图床限制图片文件的大小，所给的图片链接也存在失效的风险。更为重要的是，我尝试将图片设置为文章封面后，封面图片便会显示“图片损坏”（当然这也可能是网站的其他文件未设置好导致的）。总之，在当时，上述没有一种方法能实现正常加载图片。</p>
+<p>后来我参照其他教程，从Github上下载并安装了Picgo,用来更方便地上传图片和复制图片链接。该教程给出了两种Picgo的上传路径——github仓库和vika。我下载的Picgo的版本并不支持vika,且我无法找到其他版本的资源。至于github仓库……经实践证明它的加载和上传速度依旧很慢,以至于在Picgo的图库页面都无法显示图片。</p>
+<p>最后，我在七牛云建立对象储存，将Picgo连接至七牛云。至此，我才完成了图床的建立。</p>
+</blockquote>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><blockquote>
+<p>由于在国内平台注册域名需要个人信息审核，我在提交资料后等了大概两天才注册域名。<br>本站的域名为 ultramarine.cc  。这个域名挺长的，很难让人记住。Ultramarine是矿物颜料群青的英文单词，如果这样说的话就比较好记了。（应该吧<br>这个域名从视觉上看比较美观（没有特别突兀的字母，大写的U与l同高，整体高度变化平缓），意义指向上也比较美观（群青是一种美丽的、来自阿富汗兴都库什山脉的颜料）。<br>除此以外没有其他特殊含义。</p>
+</blockquote>
+<p>本站目前还在建设当中后续还会添加留言评论、时钟、图库、RSS，以及网站介绍。后续网站还会魔改与完善，敬请期待。</p>
+]]></content>
       <categories>
-          
-          <category> C语言 </category>
-          
+        <category>更新</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> C语言 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>角堇&amp;三色堇种植</title>
-      <link href="/2023/01/26/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D/"/>
-      <url>/2023/01/26/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D/</url>
-      
-        <content type="html"><![CDATA[<h1 id="角堇种植记录"><a href="#角堇种植记录" class="headerlink" title="角堇种植记录"></a>角堇种植记录</h1><h2 id="何为角堇？"><a href="#何为角堇？" class="headerlink" title="何为角堇？"></a>何为角堇？</h2><p>角堇属于堇菜科、堇菜属多年生草本植物，自然花期11-5月，花期较长。它的植株较为低矮，花多且轻盈。一般播种温度在18摄氏度左右。于长江中下游地区而言，秋末冬初时节便是最好的播种时间。<br>它虽然不是本土植物，但依旧很常见。它是常用的道路绿化花卉，在路边的花坛里经常能见到。</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/jiaojin.jpg"    height=500 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图源网络</div></center><p>角堇有很好的耐寒性，其生长期贯穿整个冬春季节，恣意灿烂的小花能够装点萧条的冬季与早春。</p><h2 id="育苗"><a href="#育苗" class="headerlink" title="育苗"></a>育苗</h2><p>去年九月底，随着一轮冷空气的南移，当地的气温降至二十摄氏度左右，便可以开始育苗了。 </p><p>种子及相关工具均是从淘宝网店购买，十颗油菜籽粒大小的种子被封装在离心管内</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/jiaojin9.jpg" height=250 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">      封装在离心管中的角堇种子      </div></center><p>我对植物养育没有经验，因此很多步骤都是参照网店的教程。我仅仅只是想养些花，但在店家教程的推销下，我又买了一个育苗盆（育苗盆可以给种子提供合适的光照、温度、空气、湿度，提高种子的发芽率，使种子出苗整齐。但是等发芽后不久便需要移栽，在操作过程中并不方便。育苗盆更适合规模化种植，而对于像我这种简单的养花而言，反而徒添了些麻烦。）。</p><p>我按照店家的教程，往育苗盆的各个槽中填满泥炭土，添满水，浸泡一段时间后将水倒出，再将种子植入土下三毫米处。</p><p>大致工作基本完成，将塑料顶盖盖上就可以了。之后只需要注意及时补水。如果气温偏高，还需要移除顶盖。</p><p>七天以后，种子大概都已发芽。<del>此时对幼苗给予单侧光源照射，你就可以观察植物的向光性啦。</del></p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/jiaojin4.jpg" height=250 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">      发芽      </div></center>**注意**：此时最好不要放置在只有单侧光照射的室内（幼苗会向外倾斜，过少的光会导致茎不断生长，造成徒长），更不要频繁移动育苗盆（幼苗真的会东倒西歪的啊！）。<p>若想避免徒长，应该尽快将幼苗移入太阳光内。</p><p>如果种子埋得太浅，幼苗会较早破土，一段时间后才会开始长叶，在此之前，茎一直在伸长，因此前两片真叶的位置里土较远，植株重心偏上，后期容易长歪，株型会不好看。而较晚破土的幼苗的前两片真叶离地很近，植株的结构合理且稳定。因此种子的覆土尽量还是深一些。</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/jiaojin1.jpg" height=200 alt=""/>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/jiaojin6.jpg" height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">      前者为合理的结构（源自淘宝评论区），后者为徒长及出芽过早的导致茎秆过长（我自己的）。      </div></center><h2 id="移栽"><a href="#移栽" class="headerlink" title="移栽"></a>移栽</h2><p>待幼苗长到四到六片真叶时，便可以移栽到花盆里了。如果移栽的时间过晚，植株的根会增多，移栽时根更容易受损。</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/jiaojin2.jpg" height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">      移栽的植株      </div></center><p>移栽较为繁琐，在挖取幼苗的过程中要避免对根系的破坏，在栽种时要避免植株的歪倒。</p><p><del>当然种歪了也没有什么关系，生命自会寻找到它的出路</del></p><p>我移栽完后，各个幼苗歪歪倒倒（这也和早期徒长严重，底部茎部较长有关），看起来无甚生机。生长了一段时间后，在生长素与向光性的帮助下，植株依旧坚挺向上……</p><h2 id="花盆-amp-土壤"><a href="#花盆-amp-土壤" class="headerlink" title="花盆&amp;土壤"></a>花盆&amp;土壤</h2><p>花盆直接影响盆栽的整体外观，选择一个好的花盆极为重要。</p><p>角堇的植株较为低矮，种植时一般将多棵种于一个花盆中，以创造出簇拥的花丛形态。</p><p>为此，我挑选了两种花盆。一种为酢浆草盆，另一种为普通的15cm<del>口径的</del>广口塑料花盆。</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/jiaojin14.jpg" height=200 alt=""/>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/jiaojin15.jpg" height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">      酢浆草盆与广口花盆      </div></center><p>花盆的土壤不能太过于紧实，否则浇花的水无法下渗。我在准备花盆时，刻意压紧了泥土（我感觉泥炭土太轻了，理应更加紧实一些），这便导致后续浇上去的水迟迟无法完全下渗。我只能在土中戳一个洞，让水以侧面迂回的方式避免与土表的正面冲突（<del>马奇诺防线</del>）直达根系。</p><h2 id="光照"><a href="#光照" class="headerlink" title="光照"></a>光照</h2><p>角堇为喜光植物，对光的需求较大，因此要尽量让它多晒太阳。</p><p>博主的角堇放在大学的宿舍里，而博主的宿舍处于底层朝北的位置，终年不见日光。由于处于底楼，日光的反射光也并不多……</p><p>为提供尽量多的光照，博主将盆栽置于宿舍阳台（朝北）护栏外的空调外机顶，离地仅1.5米。</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/jiaojin10.jpg" height=300 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">      放在空调外机顶      </div></center><p>尽管如此，光照依旧不足，徒长等问题无法避免，但光线足够角堇用以生长，只是速度较慢。</p><p>底层也并非真的全年无光。冬季的上午10点30分左右，太阳光线会通过对面宿舍顶楼玻璃窗户的反射，刚好照射到盆栽上。(*´∀`)真好啊真好。</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/jiaojin11.jpg" height=300 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">      阳光的反射      </div></center>## 结尾十二月中旬，由于疫情扩散，我们便开始了返乡。<p>那时两盆角堇都还未结花蕾，最小的那盆里的植株才刚刚长好四片真叶。</p><p>无论如何，我无法目睹它们的开花了。</p><p>将两大盆花带回家必然是不太可行的，我也只能将它们留在学校，放在宿舍楼底的露天花坛里，冬季紊乱的流云大概会带来它需要的养分吧。</p>]]></content>
-      
-      
+      <tags>
+        <tag>更新</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>整点薯条-FALSEKNEES漫画分享</title>
+    <url>/2023/01/06/%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-FALSEKNEES%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<blockquote>
+<p>新的url链接已经更换好了。<br><del>旧的url链接已经失效，图片暂时无法查看。估计很快就会更换……吧</del></p>
+</blockquote>
+<p><img src="https://picgo.ultramarine.cc/img/m0.jpg"><br><img src="https://picgo.ultramarine.cc/img/m1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m2.jpg"><br><img src="https://picgo.ultramarine.cc/img/m3.1.webp"><br><img src="https://picgo.ultramarine.cc/img/m3.jpg"><br><img src="https://picgo.ultramarine.cc/img/m4.1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m4.jpg"><br><img src="https://picgo.ultramarine.cc/img/m5.jpg"><br><img src="https://picgo.ultramarine.cc/img/m6.jpg"><br><img src="https://picgo.ultramarine.cc/img/m7.jpg"><br><img src="https://picgo.ultramarine.cc/img/m8.1.webp"><br><img src="https://picgo.ultramarine.cc/img/m8.jpg"><br><img src="https://picgo.ultramarine.cc/img/m9.jpg"><br><img src="https://picgo.ultramarine.cc/img/m10.jpg"><br><img src="https://picgo.ultramarine.cc/img/m11.jpg"><br><img src="https://picgo.ultramarine.cc/img/m12.jpg"><br><img src="https://picgo.ultramarine.cc/img/m13.jpg"><br><img src="https://picgo.ultramarine.cc/img/m14.jpg"><br><img src="https://picgo.ultramarine.cc/img/m15.jpg"><br><img src="https://picgo.ultramarine.cc/img/m16.jpg"><br><img src="https://picgo.ultramarine.cc/img/m17.jpg"><br><img src="https://picgo.ultramarine.cc/img/m18.jpg"><br><img src="https://picgo.ultramarine.cc/img/m19.jpg"><br><img src="https://picgo.ultramarine.cc/img/m20.jpg"><br><img src="https://picgo.ultramarine.cc/img/m21.jpg"><br><img src="https://picgo.ultramarine.cc/img/m22.jpg"><br><img src="https://picgo.ultramarine.cc/img/m23.jpg"><br><img src="https://picgo.ultramarine.cc/img/m24.jpg"><br><img src="https://picgo.ultramarine.cc/img/m25.jpg"><br><img src="https://picgo.ultramarine.cc/img/m26.jpg"><br><img src="https://picgo.ultramarine.cc/img/m27.jpg"><br><img src="https://picgo.ultramarine.cc/img/m28.jpg"><br><img src="https://picgo.ultramarine.cc/img/m29.jpg"><br><img src="https://picgo.ultramarine.cc/img/m30.jpg"><br><img src="https://picgo.ultramarine.cc/img/m31.jpg"><br><img src="https://picgo.ultramarine.cc/img/m32.jpg"><br><img src="https://picgo.ultramarine.cc/img/m33.jpg"><br><img src="https://picgo.ultramarine.cc/img/m34.jpg"><br><img src="https://picgo.ultramarine.cc/img/m35.jpg"><br><img src="https://picgo.ultramarine.cc/img/m36.jpg"><br><img src="https://picgo.ultramarine.cc/img/m37.jpg"><br><img src="https://picgo.ultramarine.cc/img/m38.jpg"><br><img src="https://picgo.ultramarine.cc/img/m39.jpg"><br><img src="https://picgo.ultramarine.cc/img/m40.jpg"><br><img src="https://picgo.ultramarine.cc/img/m41.jpg"><br><img src="https://picgo.ultramarine.cc/img/m42.jpg"><br><img src="https://picgo.ultramarine.cc/img/m43.jpg"><br><img src="https://picgo.ultramarine.cc/img/m44.jpg"><br><img src="https://picgo.ultramarine.cc/img/m45.jpg"><br><img src="https://picgo.ultramarine.cc/img/m46.jpg"><br><img src="https://picgo.ultramarine.cc/img/m47.jpg"><br><img src="https://picgo.ultramarine.cc/img/m48.jpg"><br><img src="https://picgo.ultramarine.cc/img/m49.jpg"><br><img src="https://picgo.ultramarine.cc/img/m50.jpg"><br><img src="https://picgo.ultramarine.cc/img/m51.jpg"><br><img src="https://picgo.ultramarine.cc/img/m52.jpg"><br><img src="https://picgo.ultramarine.cc/img/m53.jpg"><br><img src="https://picgo.ultramarine.cc/img/m54.jpg"><br><img src="https://picgo.ultramarine.cc/img/m55.jpg"><br><img src="https://picgo.ultramarine.cc/img/m56.jpg"><br><img src="https://picgo.ultramarine.cc/img/m57.jpg"><br><img src="https://picgo.ultramarine.cc/img/m58.jpg"><br><img src="https://picgo.ultramarine.cc/img/m59.jpg"><br><img src="https://picgo.ultramarine.cc/img/m60.jpg"><br><img src="https://picgo.ultramarine.cc/img/m61.jpg"><br><img src="https://picgo.ultramarine.cc/img/m62.jpg"><br><img src="https://picgo.ultramarine.cc/img/m63.jpg"><br><img src="https://picgo.ultramarine.cc/img/m64.jpg"><br><img src="https://picgo.ultramarine.cc/img/m65.jpg"><br><img src="https://picgo.ultramarine.cc/img/m66.jpg"><br><img src="https://picgo.ultramarine.cc/img/m67.jpg"><br><img src="https://picgo.ultramarine.cc/img/m68.jpg"><br><img src="https://picgo.ultramarine.cc/img/m69.jpg"><br><img src="https://picgo.ultramarine.cc/img/m70.jpg"><br><img src="https://picgo.ultramarine.cc/img/m71.jpg"><br><img src="https://picgo.ultramarine.cc/img/m72.jpg"><br><img src="https://picgo.ultramarine.cc/img/m73.jpg"><br><img src="https://picgo.ultramarine.cc/img/m74.jpg"><br><img src="https://picgo.ultramarine.cc/img/m75.jpg"><br><img src="https://picgo.ultramarine.cc/img/m76.jpg"><br><img src="https://picgo.ultramarine.cc/img/m77.jpg"><br><img src="https://picgo.ultramarine.cc/img/m78.jpg"><br><img src="https://picgo.ultramarine.cc/img/m79.jpg"><br><img src="https://picgo.ultramarine.cc/img/m80.jpg"><br><img src="https://picgo.ultramarine.cc/img/m81.jpg"><br><img src="https://picgo.ultramarine.cc/img/m82.jpg"><br><img src="https://picgo.ultramarine.cc/img/m83.jpg"><br><img src="https://picgo.ultramarine.cc/img/m84.jpg"><br><img src="https://picgo.ultramarine.cc/img/m85.jpg"><br><img src="https://picgo.ultramarine.cc/img/m86.jpg"><br><img src="https://picgo.ultramarine.cc/img/m87.jpg"><br><img src="https://picgo.ultramarine.cc/img/m88.jpg"><br><img src="https://picgo.ultramarine.cc/img/m89.jpg"><br><img src="https://picgo.ultramarine.cc/img/m90.jpg"><br><img src="https://picgo.ultramarine.cc/img/m92.1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m92.webp"><br><img src="https://picgo.ultramarine.cc/img/m93.webp"><br><img src="https://picgo.ultramarine.cc/img/m94.jpg"></p>
+]]></content>
+      <tags>
+        <tag>图库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于网站图片目前无法加载的解释</title>
+    <url>/2023/01/21/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E5%9B%BE%E7%89%87%E7%9B%AE%E5%89%8D%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<p>2023/1/21：<br>本网站的图片均储存在七牛云的对象储存中。在没有外链域名时，七牛云无法提供图片的预览、下载、复制外链。而绑定外链需要让网站提前通过网站公安备案，否则无法在国内提供网络服务。<br>目前正在申请网站公安备案。</p>
+<hr>
+<p>2023/1/22凌晨更新：<br>  申请网站公安备案需要提供网络接入商的信息、电话、地址，而我的网站托管在Vercel上，该平台并不在国内，且网络上无法查到Vercel相关的联系电话。同时，我的网站目前没有申请工信部ICP备案（备案需要通过阿里云一类的云服务平台，个人无法单独办理。只有购买了该平台的产品，比如服务器，才能获得备案的资格）。无论是公安备案还是ICP备案，都需要不下十天的时间。整个过程需要花费不少的时间与经济成本。</p>
+<p>  让我们再将目光移回Vercel。在建站之初，我尝试过用Vercel部署图床（详情请见<a href="https://www.ultramarine.cc/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/">建站小记</a>），但当时由于没有域名，并没有成功部署，单纯使用Github时延迟过大。</p>
+<p>  我一直秉持着能省则省的原则，如果能够白嫖，那便是极好的。等明天我会具体实践一下，图片无法加载的问题预计很快就能解决。</p>
+]]></content>
       <categories>
-          
-          <category> 园艺 </category>
-          
+        <category>更新</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 园艺 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>耶，复活了</title>
-      <link href="/2023/01/22/%E8%80%B6%EF%BC%8C%E5%A4%8D%E6%B4%BB%E4%BA%86/"/>
-      <url>/2023/01/22/%E8%80%B6%EF%BC%8C%E5%A4%8D%E6%B4%BB%E4%BA%86/</url>
-      
-        <content type="html"><![CDATA[<h1 id="耶，复活了"><a href="#耶，复活了" class="headerlink" title="耶，复活了"></a>耶，复活了</h1><h2 id="首先，新年快乐！"><a href="#首先，新年快乐！" class="headerlink" title="首先，新年快乐！"></a><font color=#ed3333>首先，新年快乐！</font><br /></h2><p>网站的图片已经逐步恢复。</p><p>在这之前，我使用七牛云作为图床。在没有添加自定义域名时，七牛云会提供测试域名供用户测试和体验产品功能。目前，我的测试域名已过期，如需继续使用，则需要绑定自定义域名。而只有提供已备案的自定义域名才能成功绑定并在国内提供服务。</p><p>域名备案是耗时耗钱的事。为了备案成功，网站最好布置在国内服务器上。但在阿里云上，就算租聘一台轻量级云服务器一年的价格也需要几百元。<br>为了节约成本，最好的方法便是放弃使用国内的对象储存。我参考<a href="https://www.fomal.cc/">fomalhaut</a> 的<a href="https://www.fomal.cc/posts/d7fb1ba1.html#3-1-Github%E5%9B%BE%E5%BA%8A">免费图床综合教程</a>,用Vercel和Github重新搭建免费图床。</p><p>相较于网络上一大批的免费图床，这种方法较为麻烦。倘若没有Picgo，后续的图片上传等工作也会很繁琐。</p><p>免费图床虽好，但它们图片的加载速度很慢。</p> <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/luguotuchuang.jpg" width = "30%" alt=""/>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/verceltuchuang.jpg" width = "30%" alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">      两个图床加载相同图片的解析时间对比。上侧为免费图床“路过图床”，下侧为Vercel + Github 图床。      </div></center><p>可以明显看出，免费图床的解析时间普遍较长。</p><p>截至目前，网站的图片还没有全部恢复。更换所有的url链接需要一点时间。</p><hr> <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2023-01-07T13-21-31.444Z.png" width = "30%" alt=""/>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://picgo.ultramarine.cc/img/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2023-01-06T07-00-59.383Z.png" width = "30%" alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">      在这里再展示两张之前网站的大致样式。      </div></center>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于网站图片目前无法加载的解释</title>
-      <link href="/2023/01/21/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E5%9B%BE%E7%89%87%E7%9B%AE%E5%89%8D%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%A7%A3%E5%86%B3/"/>
-      <url>/2023/01/21/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E5%9B%BE%E7%89%87%E7%9B%AE%E5%89%8D%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
-      
-        <content type="html"><![CDATA[<p>2023/1/21：<br>本网站的图片均储存在七牛云的对象储存中。在没有外链域名时，七牛云无法提供图片的预览、下载、复制外链。而绑定外链需要让网站提前通过网站公安备案，否则无法在国内提供网络服务。<br>目前正在申请网站公安备案。</p><hr><p>2023/1/22凌晨更新：<br>  申请网站公安备案需要提供网络接入商的信息、电话、地址，而我的网站托管在Vercel上，该平台并不在国内，且网络上无法查到Vercel相关的联系电话。同时，我的网站目前没有申请工信部ICP备案（备案需要通过阿里云一类的云服务平台，个人无法单独办理。只有购买了该平台的产品，比如服务器，才能获得备案的资格）。无论是公安备案还是ICP备案，都需要不下十天的时间。整个过程需要花费不少的时间与经济成本。</p><p>  让我们再将目光移回Vercel。在建站之初，我尝试过用Vercel部署图床（详情请见<a href="https://www.ultramarine.cc/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/">建站小记</a>），但当时由于没有域名，并没有成功部署，单纯使用Github时延迟过大。</p><p>  我一直秉持着能省则省的原则，如果能够白嫖，那便是极好的。等明天我会具体实践一下，图片无法加载的问题预计很快就能解决。</p>]]></content>
-      
-      
+      <tags>
+        <tag>更新</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>今天冬至，生活还得继续</title>
+    <url>/2022/12/22/%E4%BB%8A%E5%A4%A9%E5%86%AC%E8%87%B3%EF%BC%8C%E7%94%9F%E6%B4%BB%E8%BF%98%E5%BE%97%E7%BB%A7%E7%BB%AD/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="aa005455d7f571932a77b96128166f254854343b97589a234308e5bd9722d1dc">72a04274c08925e97bfb98becfa2343d7fe035a6f5426754b2a04cda90dddbf694bf879be292924937d33f39aa46e6eab60fdcb239acbc730022df8e15849278d2c76c815a4e5bf88a929c2093f5a8d72e8d8244c43ddc01dd0014c28b28487180f0bf4d5889c7dc641ffbcfd13b353a5e1a1da377a68668b180e3de3e4d97f5f5f9210546c6666814e4620c02acd04fbbf86cbe77b9b5e8e6c12fa2b97d4d301977342c7bb3c9f3c15164586aaefc72d98559e5d9a257ae777229a2ac7ba7e7eded128b884ef2df972358c729e77cd13481aea3f27fd2bdef2e91da55ce97882d3fb96c6b3ae0e33c0b297bb73dab00255935058803f108f4e18afd1a259986bcd67261374561a7a67f61d2feac65fdcb91beb783bc1c9f2b44d8bbb287253a7563124017e58e1c4b5b0f826ea773288822bad6ea4d85be313d9897bc44f8c3c1d43e2baab9a0d85d4cd65c64c2a691b6afff4fedec3dd3fc2693d0ac181b40a92fce59f0142cf9f9453d9412566342531fc31fd56667b5ba867ff613d503ad4d296d0d889de2ab9c56b2d795428140f43705583e1b01c692a016e2dc812c97ad80ba56ff789e868f150a8d85c9fae0afaeb6ecdb7c89250bf42020e4d4f6724292844c11ca3521c4a870ccd492d959bd4d38bab1264d7f9af71b31c28491ac73a2ac1b8cf64af082adeda5fd8761a0f405c15a550272374a8861c899c03185bc108081cc6f5951884a69cf236255d5b53ed973f18bfda49d9cf2dc3c47d68edb55554c581f885efc0e916d572b5bb5c08efea32adb960cb20bb11f91fb733a1234f3d2be6b10396d9a795e18568b5a9c517225dd1978cd10b420137dcc55dedb7a07094182e01867a509dc5961d421fdd002f05b0f9e940330320cf45a686ae5f6b596271c7c392862e56c3410133479391fb46a31ac23545fcbb41aa9814c8bc63ca8f708df1992f3cf0c3ba2c849a7b1fc2d3ae2e6bb6162df5ba7037f2b170f7fd92db874fedc6aaf7842dba5ec4775d022d3a117eccfcda2840f06ca44cee88260009326d5dc6c6b03b6e5f62b900d6d53ecbcdf94b68f185be2c7ce19585ab9d476b12f0a77b9ac5347574b1055e762acf04e724c1e19c78ce7cbba343b7b8581401ac14b7d52105291f09de246a83fd3be6179f26495f5a62fc85b57218c2d915bd5a012375c8971138c2d89e2a2d3e89eeb977a952cff3052950fae91c55a08785e965b00ec97649f1cf334501d63b6c85761d1ac76a3332d6023a0f06f87654695bd28967e1885106d02c3820160ac17e8d01f3c8ec181addeed6b0d482b4dec4ccd70a538a3ac11bc17256fa348a47758b316c43c9f783b4959f36aad23cace6c3b08a84f656c90f41d925295b0e603eb85d02726f14150c708c74ec602778b55dbc2f067907f4d308be5e03ef4abd5b394eb5fbc48efea3bac884e2d542ef647ecc99e7c158fd5e0cae926d0243791cfbd75236140f2a4860d77b0ed3543b2a58946d51c571f830068862b8ce78281d57cd4d28fd0c27893d4ac449e35b535cbdb3ae3398a3974efd4b04066fa24644ff5f721880628afe91cf86d2ee79c0135741c4d09c2c4572350f6af7fb6857dfb9bb3900f8fd461e65d07a45b3ff914260a76c159f40c011a8e8788ba4c81e13af9a92a3b3072425ad247d5a46d55ecc7c3fe61b57d0cfbf98bfd2c70650bd7e9f542cf36a0be5ac99723</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-          
-          <category> 更新 </category>
-          
+        <category>随想</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 更新 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>整点薯条-FALSEKNEES漫画分享</title>
-      <link href="/2023/01/06/%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-FALSEKNEES%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB/"/>
-      <url>/2023/01/06/%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-FALSEKNEES%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>新的url链接已经更换好了。<br><del>旧的url链接已经失效，图片暂时无法查看。估计很快就会更换……吧</del></p></blockquote><p><img src="https://picgo.ultramarine.cc/img/m0.jpg"><br><img src="https://picgo.ultramarine.cc/img/m1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m2.jpg"><br><img src="https://picgo.ultramarine.cc/img/m3.1.webp"><br><img src="https://picgo.ultramarine.cc/img/m3.jpg"><br><img src="https://picgo.ultramarine.cc/img/m4.1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m4.jpg"><br><img src="https://picgo.ultramarine.cc/img/m5.jpg"><br><img src="https://picgo.ultramarine.cc/img/m6.jpg"><br><img src="https://picgo.ultramarine.cc/img/m7.jpg"><br><img src="https://picgo.ultramarine.cc/img/m8.1.webp"><br><img src="https://picgo.ultramarine.cc/img/m8.jpg"><br><img src="https://picgo.ultramarine.cc/img/m9.jpg"><br><img src="https://picgo.ultramarine.cc/img/m10.jpg"><br><img src="https://picgo.ultramarine.cc/img/m11.jpg"><br><img src="https://picgo.ultramarine.cc/img/m12.jpg"><br><img src="https://picgo.ultramarine.cc/img/m13.jpg"><br><img src="https://picgo.ultramarine.cc/img/m14.jpg"><br><img src="https://picgo.ultramarine.cc/img/m15.jpg"><br><img src="https://picgo.ultramarine.cc/img/m16.jpg"><br><img src="https://picgo.ultramarine.cc/img/m17.jpg"><br><img src="https://picgo.ultramarine.cc/img/m18.jpg"><br><img src="https://picgo.ultramarine.cc/img/m19.jpg"><br><img src="https://picgo.ultramarine.cc/img/m20.jpg"><br><img src="https://picgo.ultramarine.cc/img/m21.jpg"><br><img src="https://picgo.ultramarine.cc/img/m22.jpg"><br><img src="https://picgo.ultramarine.cc/img/m23.jpg"><br><img src="https://picgo.ultramarine.cc/img/m24.jpg"><br><img src="https://picgo.ultramarine.cc/img/m25.jpg"><br><img src="https://picgo.ultramarine.cc/img/m26.jpg"><br><img src="https://picgo.ultramarine.cc/img/m27.jpg"><br><img src="https://picgo.ultramarine.cc/img/m28.jpg"><br><img src="https://picgo.ultramarine.cc/img/m29.jpg"><br><img src="https://picgo.ultramarine.cc/img/m30.jpg"><br><img src="https://picgo.ultramarine.cc/img/m31.jpg"><br><img src="https://picgo.ultramarine.cc/img/m32.jpg"><br><img src="https://picgo.ultramarine.cc/img/m33.jpg"><br><img src="https://picgo.ultramarine.cc/img/m34.jpg"><br><img src="https://picgo.ultramarine.cc/img/m35.jpg"><br><img src="https://picgo.ultramarine.cc/img/m36.jpg"><br><img src="https://picgo.ultramarine.cc/img/m37.jpg"><br><img src="https://picgo.ultramarine.cc/img/m38.jpg"><br><img src="https://picgo.ultramarine.cc/img/m39.jpg"><br><img src="https://picgo.ultramarine.cc/img/m40.jpg"><br><img src="https://picgo.ultramarine.cc/img/m41.jpg"><br><img src="https://picgo.ultramarine.cc/img/m42.jpg"><br><img src="https://picgo.ultramarine.cc/img/m43.jpg"><br><img src="https://picgo.ultramarine.cc/img/m44.jpg"><br><img src="https://picgo.ultramarine.cc/img/m45.jpg"><br><img src="https://picgo.ultramarine.cc/img/m46.jpg"><br><img src="https://picgo.ultramarine.cc/img/m47.jpg"><br><img src="https://picgo.ultramarine.cc/img/m48.jpg"><br><img src="https://picgo.ultramarine.cc/img/m49.jpg"><br><img src="https://picgo.ultramarine.cc/img/m50.jpg"><br><img src="https://picgo.ultramarine.cc/img/m51.jpg"><br><img src="https://picgo.ultramarine.cc/img/m52.jpg"><br><img src="https://picgo.ultramarine.cc/img/m53.jpg"><br><img src="https://picgo.ultramarine.cc/img/m54.jpg"><br><img src="https://picgo.ultramarine.cc/img/m55.jpg"><br><img src="https://picgo.ultramarine.cc/img/m56.jpg"><br><img src="https://picgo.ultramarine.cc/img/m57.jpg"><br><img src="https://picgo.ultramarine.cc/img/m58.jpg"><br><img src="https://picgo.ultramarine.cc/img/m59.jpg"><br><img src="https://picgo.ultramarine.cc/img/m60.jpg"><br><img src="https://picgo.ultramarine.cc/img/m61.jpg"><br><img src="https://picgo.ultramarine.cc/img/m62.jpg"><br><img src="https://picgo.ultramarine.cc/img/m63.jpg"><br><img src="https://picgo.ultramarine.cc/img/m64.jpg"><br><img src="https://picgo.ultramarine.cc/img/m65.jpg"><br><img src="https://picgo.ultramarine.cc/img/m66.jpg"><br><img src="https://picgo.ultramarine.cc/img/m67.jpg"><br><img src="https://picgo.ultramarine.cc/img/m68.jpg"><br><img src="https://picgo.ultramarine.cc/img/m69.jpg"><br><img src="https://picgo.ultramarine.cc/img/m70.jpg"><br><img src="https://picgo.ultramarine.cc/img/m71.jpg"><br><img src="https://picgo.ultramarine.cc/img/m72.jpg"><br><img src="https://picgo.ultramarine.cc/img/m73.jpg"><br><img src="https://picgo.ultramarine.cc/img/m74.jpg"><br><img src="https://picgo.ultramarine.cc/img/m75.jpg"><br><img src="https://picgo.ultramarine.cc/img/m76.jpg"><br><img src="https://picgo.ultramarine.cc/img/m77.jpg"><br><img src="https://picgo.ultramarine.cc/img/m78.jpg"><br><img src="https://picgo.ultramarine.cc/img/m79.jpg"><br><img src="https://picgo.ultramarine.cc/img/m80.jpg"><br><img src="https://picgo.ultramarine.cc/img/m81.jpg"><br><img src="https://picgo.ultramarine.cc/img/m82.jpg"><br><img src="https://picgo.ultramarine.cc/img/m83.jpg"><br><img src="https://picgo.ultramarine.cc/img/m84.jpg"><br><img src="https://picgo.ultramarine.cc/img/m85.jpg"><br><img src="https://picgo.ultramarine.cc/img/m86.jpg"><br><img src="https://picgo.ultramarine.cc/img/m87.jpg"><br><img src="https://picgo.ultramarine.cc/img/m88.jpg"><br><img src="https://picgo.ultramarine.cc/img/m89.jpg"><br><img src="https://picgo.ultramarine.cc/img/m90.jpg"><br><img src="https://picgo.ultramarine.cc/img/m92.1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m92.webp"><br><img src="https://picgo.ultramarine.cc/img/m93.webp"><br><img src="https://picgo.ultramarine.cc/img/m94.jpg"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 图库 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>今天冬至，生活还得继续</title>
-      <link href="/2022/12/22/%E4%BB%8A%E5%A4%A9%E5%86%AC%E8%87%B3%EF%BC%8C%E7%94%9F%E6%B4%BB%E8%BF%98%E5%BE%97%E7%BB%A7%E7%BB%AD/"/>
-      <url>/2022/12/22/%E4%BB%8A%E5%A4%A9%E5%86%AC%E8%87%B3%EF%BC%8C%E7%94%9F%E6%B4%BB%E8%BF%98%E5%BE%97%E7%BB%A7%E7%BB%AD/</url>
-      
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="aa005455d7f571932a77b96128166f254854343b97589a234308e5bd9722d1dc">72a04274c08925e97bfb98becfa2343d7fe035a6f5426754b2a04cda90dddbf694bf879be292924937d33f39aa46e6eab60fdcb239acbc730022df8e15849278d2c76c815a4e5bf88a929c2093f5a8d72e8d8244c43ddc01dd0014c28b28487180f0bf4d5889c7dc641ffbcfd13b353a5e1a1da377a68668b180e3de3e4d97f5f5f9210546c6666814e4620c02acd04fbbf86cbe77b9b5e8e6c12fa2b97d4d301977342c7bb3c9f3c15164586aaefc72d98559e5d9a257ae777229a2ac7ba7e7eded128b884ef2df972358c729e77cd13481aea3f27fd2bdef2e91da55ce97882d3fb96c6b3ae0e33c0b297bb73dab00255935058803f108f4e18afd1a259986bcd67261374561a7a67f61d2feac65fdcb91beb783bc1c9f2b44d8bbb287253a7563124017e58e1c4b5b0f826ea773288822bad6ea4d85be313d9897bc44f8c3c1d43e2baab9a0d85d4cd65c64c2a691b6afff4fedec3dd3fc2693d0ac181b40a92fce59f0142cf9f9453d9412566342531fc31fd56667b5ba867ff613d503ad4d296d0d889de2ab9c56b2d795428140f43705583e1b01c692a016e2dc812c97ad80ba56ff789e868f150a8d85c9fae0afaeb6ecdb7c89250bf42020e4d4f6724292844c11ca3521c4a870ccd492d959bd4d38bab1264d7f9af71b31c28491ac73a2ac1b8cf64af082adeda5fd8761a0f405c15a550272374a8861c899c03185bc108081cc6f5951884a69cf236255d5b53ed973f18bfda49d9cf2dc3c47d68edb55554c581f885efc0e916d572b5bb5c08efea32adb960cb20bb11f91fb733a1234f3d2be6b10396d9a795e18568b5a9c517225dd1978cd10b420137dcc55dedb7a07094182e01867a509dc5961d421fdd002f05b0f9e940330320cf45a686ae5f6b596271c7c392862e56c3410133479391fb46a31ac23545fcbb41aa9814c8bc63ca8f708df1992f3cf0c3ba2c849a7b1fc2d3ae2e6bb6162df5ba7037f2b170f7fd92db874fedc6aaf7842dba5ec4775d022d3a117eccfcda2840f06ca44cee88260009326d5dc6c6b03b6e5f62b900d6d53ecbcdf94b68f185be2c7ce19585ab9d476b12f0a77b9ac5347574b1055e762acf04e724c1e19c78ce7cbba343b7b8581401ac14b7d52105291f09de246a83fd3be6179f26495f5a62fc85b57218c2d915bd5a012375c8971138c2d89e2a2d3e89eeb977a952cff3052950fae91c55a08785e965b00ec97649f1cf334501d63b6c85761d1ac76a3332d6023a0f06f87654695bd28967e1885106d02c3820160ac17e8d01f3c8ec181addeed6b0d482b4dec4ccd70a538a3ac11bc17256fa348a47758b316c43c9f783b4959f36aad23cace6c3b08a84f656c90f41d925295b0e603eb85d02726f14150c708c74ec602778b55dbc2f067907f4d308be5e03ef4abd5b394eb5fbc48efea3bac884e2d542ef647ecc99e7c158fd5e0cae926d0243791cfbd75236140f2a4860d77b0ed3543b2a58946d51c571f830068862b8ce78281d57cd4d28fd0c27893d4ac449e35b535cbdb3ae3398a3974efd4b04066fa24644ff5f721880628afe91cf86d2ee79c0135741c4d09c2c4572350f6af7fb6857dfb9bb3900f8fd461e65d07a45b3ff914260a76c159f40c011a8e8788ba4c81e13af9a92a3b3072425ad247d5a46d55ecc7c3fe61b57d0cfbf98bfd2c70650bd7e9f542cf36a0be5ac99723</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-xray">      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>      </label>      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>      </svg>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      
-      
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>耶，复活了</title>
+    <url>/2023/01/22/%E8%80%B6%EF%BC%8C%E5%A4%8D%E6%B4%BB%E4%BA%86/</url>
+    <content><![CDATA[<h1 id="耶，复活了"><a href="#耶，复活了" class="headerlink" title="耶，复活了"></a>耶，复活了</h1><h2 id="首先，新年快乐！"><a href="#首先，新年快乐！" class="headerlink" title="首先，新年快乐！"></a><font color=#ed3333>首先，新年快乐！</font><br /></h2><p>网站的图片已经逐步恢复。</p>
+<p>在这之前，我使用七牛云作为图床。在没有添加自定义域名时，七牛云会提供测试域名供用户测试和体验产品功能。目前，我的测试域名已过期，如需继续使用，则需要绑定自定义域名。而只有提供已备案的自定义域名才能成功绑定并在国内提供服务。</p>
+<p>域名备案是耗时耗钱的事。为了备案成功，网站最好布置在国内服务器上。但在阿里云上，就算租聘一台轻量级云服务器一年的价格也需要几百元。<br>为了节约成本，最好的方法便是放弃使用国内的对象储存。我参考<a href="https://www.fomal.cc/">fomalhaut</a> 的<a href="https://www.fomal.cc/posts/d7fb1ba1.html#3-1-Github%E5%9B%BE%E5%BA%8A">免费图床综合教程</a>,用Vercel和Github重新搭建免费图床。</p>
+<p>相较于网络上一大批的免费图床，这种方法较为麻烦。倘若没有Picgo，后续的图片上传等工作也会很繁琐。</p>
+<p>免费图床虽好，但它们图片的加载速度很慢。</p>
+ <center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/luguotuchuang.jpg" width = "30%" alt=""/>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/verceltuchuang.jpg" width = "30%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      两个图床加载相同图片的解析时间对比。上侧为免费图床“路过图床”，下侧为Vercel + Github 图床。
+      </div>
+</center>
+
+<p>可以明显看出，免费图床的解析时间普遍较长。</p>
+<p>截至目前，网站的图片还没有全部恢复。更换所有的url链接需要一点时间。</p>
+<hr>
+ <center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2023-01-07T13-21-31.444Z.png" width = "30%" alt=""/>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2023-01-06T07-00-59.383Z.png" width = "30%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      在这里再展示两张之前网站的大致样式。
+      </div>
+</center>
+]]></content>
+  </entry>
+  <entry>
+    <title>角堇&amp;三色堇种植</title>
+    <url>/2023/01/26/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D/</url>
+    <content><![CDATA[<h1 id="角堇种植记录"><a href="#角堇种植记录" class="headerlink" title="角堇种植记录"></a>角堇种植记录</h1><h2 id="何为角堇？"><a href="#何为角堇？" class="headerlink" title="何为角堇？"></a>何为角堇？</h2><p>角堇属于堇菜科、堇菜属多年生草本植物，自然花期11-5月，花期较长。它的植株较为低矮，花多且轻盈。一般播种温度在18摄氏度左右。于长江中下游地区而言，秋末冬初时节便是最好的播种时间。<br>它虽然不是本土植物，但依旧很常见。它是常用的道路绿化花卉，在路边的花坛里经常能见到。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/jiaojin.jpg"
+    height=500 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图源网络</div>
+</center>
+
+
+<p>角堇有很好的耐寒性，其生长期贯穿整个冬春季节，恣意灿烂的小花能够装点萧条的冬季与早春。</p>
+<h2 id="育苗"><a href="#育苗" class="headerlink" title="育苗"></a>育苗</h2><p>去年九月底，随着一轮冷空气的南移，当地的气温降至二十摄氏度左右，便可以开始育苗了。 </p>
+<p>种子及相关工具均是从淘宝网店购买，十颗油菜籽粒大小的种子被封装在离心管内</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/jiaojin9.jpg" height=250 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      封装在离心管中的角堇种子
+      </div>
+</center>
+
+<p>我对植物养育没有经验，因此很多步骤都是参照网店的教程。我仅仅只是想养些花，但在店家教程的推销下，我又买了一个育苗盆（育苗盆可以给种子提供合适的光照、温度、空气、湿度，提高种子的发芽率，使种子出苗整齐。但是等发芽后不久便需要移栽，在操作过程中并不方便。育苗盆更适合规模化种植，而对于像我这种简单的养花而言，反而徒添了些麻烦。）。</p>
+<p>我按照店家的教程，往育苗盆的各个槽中填满泥炭土，添满水，浸泡一段时间后将水倒出，再将种子植入土下三毫米处。</p>
+<p>大致工作基本完成，将塑料顶盖盖上就可以了。之后只需要注意及时补水。如果气温偏高，还需要移除顶盖。</p>
+<p>七天以后，种子大概都已发芽。<del>此时对幼苗给予单侧光源照射，你就可以观察植物的向光性啦。</del></p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/jiaojin4.jpg" height=250 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      发芽
+      </div>
+</center>
+**注意**：此时最好不要放置在只有单侧光照射的室内（幼苗会向外倾斜，过少的光会导致茎不断生长，造成徒长），更不要频繁移动育苗盆（幼苗真的会东倒西歪的啊！）。
+
+<p>若想避免徒长，应该尽快将幼苗移入太阳光内。</p>
+<p>如果种子埋得太浅，幼苗会较早破土，一段时间后才会开始长叶，在此之前，茎一直在伸长，因此前两片真叶的位置里土较远，植株重心偏上，后期容易长歪，株型会不好看。而较晚破土的幼苗的前两片真叶离地很近，植株的结构合理且稳定。因此种子的覆土尽量还是深一些。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/jiaojin1.jpg" height=200 alt=""/>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/jiaojin6.jpg" height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      前者为合理的结构（源自淘宝评论区），后者为徒长及出芽过早的导致茎秆过长（我自己的）。
+      </div>
+</center>
+
+
+
+<h2 id="移栽"><a href="#移栽" class="headerlink" title="移栽"></a>移栽</h2><p>待幼苗长到四到六片真叶时，便可以移栽到花盆里了。如果移栽的时间过晚，植株的根会增多，移栽时根更容易受损。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/jiaojin2.jpg" height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      移栽的植株
+      </div>
+</center>
+
+
+<p>移栽较为繁琐，在挖取幼苗的过程中要避免对根系的破坏，在栽种时要避免植株的歪倒。</p>
+<p><del>当然种歪了也没有什么关系，生命自会寻找到它的出路</del></p>
+<p>我移栽完后，各个幼苗歪歪倒倒（这也和早期徒长严重，底部茎部较长有关），看起来无甚生机。生长了一段时间后，在生长素与向光性的帮助下，植株依旧坚挺向上……</p>
+<h2 id="花盆-amp-土壤"><a href="#花盆-amp-土壤" class="headerlink" title="花盆&amp;土壤"></a>花盆&amp;土壤</h2><p>花盆直接影响盆栽的整体外观，选择一个好的花盆极为重要。</p>
+<p>角堇的植株较为低矮，种植时一般将多棵种于一个花盆中，以创造出簇拥的花丛形态。</p>
+<p>为此，我挑选了两种花盆。一种为酢浆草盆，另一种为普通的15cm<del>口径的</del>广口塑料花盆。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/jiaojin14.jpg" height=200 alt=""/>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/jiaojin15.jpg" height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      酢浆草盆与广口花盆
+      </div>
+</center>
+
+
+<p>花盆的土壤不能太过于紧实，否则浇花的水无法下渗。我在准备花盆时，刻意压紧了泥土（我感觉泥炭土太轻了，理应更加紧实一些），这便导致后续浇上去的水迟迟无法完全下渗。我只能在土中戳一个洞，让水以侧面迂回的方式避免与土表的正面冲突（<del>马奇诺防线</del>）直达根系。</p>
+<h2 id="光照"><a href="#光照" class="headerlink" title="光照"></a>光照</h2><p>角堇为喜光植物，对光的需求较大，因此要尽量让它多晒太阳。</p>
+<p>博主的角堇放在大学的宿舍里，而博主的宿舍处于底层朝北的位置，终年不见日光。由于处于底楼，日光的反射光也并不多……</p>
+<p>为提供尽量多的光照，博主将盆栽置于宿舍阳台（朝北）护栏外的空调外机顶，离地仅1.5米。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/jiaojin10.jpg" height=300 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      放在空调外机顶
+      </div>
+</center>
+
+<p>尽管如此，光照依旧不足，徒长等问题无法避免，但光线足够角堇用以生长，只是速度较慢。</p>
+<p>底层也并非真的全年无光。冬季的上午10点30分左右，太阳光线会通过对面宿舍顶楼玻璃窗户的反射，刚好照射到盆栽上。(*´∀`)真好啊真好。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/jiaojin11.jpg" height=300 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      阳光的反射
+      </div>
+</center>
+## 结尾
+十二月中旬，由于疫情扩散，我们便开始了返乡。
+
+<p>那时两盆角堇都还未结花蕾，最小的那盆里的植株才刚刚长好四片真叶。</p>
+<p>无论如何，我无法目睹它们的开花了。</p>
+<p>将两大盆花带回家必然是不太可行的，我也只能将它们留在学校，放在宿舍楼底的露天花坛里，冬季紊乱的流云大概会带来它需要的养分吧。</p>
+]]></content>
       <categories>
-          
-          <category> 随想 </category>
-          
+        <category>园艺</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 随想 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>建站小记</title>
-      <link href="/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/"/>
-      <url>/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<h1 id="本站梗概"><a href="#本站梗概" class="headerlink" title="本站梗概"></a>本站梗概</h1><p>    本站是博主的个人博客，基于Hexo搭建，采用Butterfly主题，网站的文件托管在Github仓库和Vercel上。在搭建过程中主要参考了<a href="https://www.fomal.cc/">Fomalhaut🥝</a> 的文章及发布在B站的同步视频。    </p><h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p> &gt;  12月16日晚，博主打开了许久未用的收音机。在晴朗的晚上，收音机能接收到的短波信号比以往更强。我检索到了一个清晰的日语频道，出于好奇，我在网络上 搜索该频道，试图查找它的相关信息。在网上冲浪期间，我发现了不少个人博客，博主在其中分享生活随笔与知识教程。由此激发的兴趣让我也搭建一个个人博客。</p><h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><blockquote><p> 必应搜索关键词“制作个人博客”的显示的第一个结果便是一篇知乎文章。通过它的指导，我完成了Git的安装，电脑与Github的连结。<br> 在这之后，我便主要参考Fomalhaut的教程，完成Hexo的搭建与主题的下载安装，将静态博客挂载到Github Pages上，并将文件托管在Vercel上。<br> 目前的网站文件是我第二次重新做的。一开始网站文件在我上传时报错了，而报错的地方是某两个我从来没改动过的文件，当时尝试无果，无法解决（之后再次实践才发现是配置文件的某个内容不准确导致的），并且github的库中也没有完整的根目录文件夹，只有“.deploy_git”文件夹中的内容。于是我只好删除重做。<br> （事实证明备份文件至关重要）（不是</p></blockquote><h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><blockquote><p>图床，指用于储存图片的服务器。这是整个搭建过程中最折磨我的地方。</p><p>首先按照教程建立的基于Github仓库的图床延迟太大，就算用免费的cdn加速，加载一张图片也要十几秒。由于当时还没有域名，无法把图床部署在Vercel上。于是我又参考第三种方法，注册了Cloudflare，但是无法通过网站给出的域名打开图片。</p><p>于是，我尝试国内的免费图床。由于服务器在国内，免费图床的加载速度极快。但是，免费图床限制图片文件的大小，所给的图片链接也存在失效的风险。更为重要的是，我尝试将图片设置为文章封面后，封面图片便会显示“图片损坏”（当然这也可能是网站的其他文件未设置好导致的）。总之，在当时，上述没有一种方法能实现正常加载图片。</p><p>后来我参照其他教程，从Github上下载并安装了Picgo,用来更方便地上传图片和复制图片链接。该教程给出了两种Picgo的上传路径——github仓库和vika。我下载的Picgo的版本并不支持vika,且我无法找到其他版本的资源。至于github仓库……经实践证明它的加载和上传速度依旧很慢,以至于在Picgo的图库页面都无法显示图片。</p><p>最后，我在七牛云建立对象储存，将Picgo连接至七牛云。至此，我才完成了图床的建立。</p></blockquote><h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><blockquote><p>由于在国内平台注册域名需要个人信息审核，我在提交资料后等了大概两天才注册域名。<br>本站的域名为 ultramarine.cc  。这个域名挺长的，很难让人记住。Ultramarine是矿物颜料群青的英文单词，如果这样说的话就比较好记了。（应该吧<br>这个域名从视觉上看比较美观（没有特别突兀的字母，大写的U与l同高，整体高度变化平缓），意义指向上也比较美观（群青是一种美丽的、来自阿富汗兴都库什山脉的颜料）。<br>除此以外没有其他特殊含义。</p></blockquote><p>本站目前还在建设当中后续还会添加留言评论、时钟、图库、RSS，以及网站介绍。后续网站还会魔改与完善，敬请期待。</p>]]></content>
-      
-      
+      <tags>
+        <tag>园艺</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/12/21/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
       <categories>
-          
-          <category> 更新 </category>
-          
+        <category>更新</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 更新 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2022/12/21/hello-world/"/>
-      <url>/2022/12/21/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
+      <tags>
+        <tag>更新</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言基础：结构体</title>
+    <url>/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/</url>
+    <content><![CDATA[<h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1><p>目录：</p>
+<ol>
+<li>结构体的概念</li>
+<li>结构体类型的定义</li>
+<li>结构体类型的嵌套定义</li>
+<li>结构体类型变量</li>
+<li>结构体类型变量的定义</li>
+<li>结构体类型变量的初始化</li>
+<li>结构体类型变量的引用</li>
+<li>注意事项1</li>
+<li>注意事项2</li>
+<li>注意事项3</li>
+<li>注意事项4</li>
+<li>相关说明</li>
+<li>结构体数组</li>
+<li>结构体数组的定义</li>
+<li>结构体数组的初始化</li>
+<li>分行初始化</li>
+<li>顺序初始化</li>
+<li>结构体数组的访问</li>
+<li>结构体数组应用举例</li>
+<li>结构体与指针</li>
+<li>指向结构体类型数据的指针</li>
+<li>指向结构体变量的指针</li>
+<li>指向结构体数组的指针</li>
+<li>结构体变量和指向结构体的指针做函数参数</li>
+<li>结构体变量做参数（值传递）</li>
+<li>结构体数组做函数参数</li>
+<li>函数返回值是结构体类型<h2 id="1-结构体的概念"><a href="#1-结构体的概念" class="headerlink" title="1.结构体的概念"></a>1.结构体的概念</h2></li>
+</ol>
+<p><strong>结构体</strong>是一种<u>构造数据类型</u></p>
+<blockquote>
+<p><em>数组也是一种构造数据类型（由多个数组合在一起），结构体可以组合不同类型的数</em></p>
+</blockquote>
+<p>用途：把<strong>不同类型</strong>的数据组合成一个整体————<strong>自定义</strong>数据类型。</p>
+<h2 id="2-结构体类型的定义"><a href="#2-结构体类型的定义" class="headerlink" title="2.结构体类型的定义"></a>2.结构体<u>类型</u>的定义</h2><blockquote>
+<p>结构体先定义类型，再定义变量</p>
+</blockquote>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128112317.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">语法格式与实例</div>
+</center>
+
+<blockquote>
+<ol>
+<li>关键字<strong>struct</strong>代表定义的是结构体类型。</li>
+<li>注意最后的分号。</li>
+<li>在之后定义变量时要使用<strong>类型名</strong>，注意类型名，在实例中，<strong>类型名不是”student”而是”struct student”!!!</strong></li>
+<li>结构体中的成员可以是普通类型，也可以是构造类型（如数组）。因此数组可以作为成员名。</li>
+</ol>
+</blockquote>
+<h3 id="结构体类型的嵌套定义"><a href="#结构体类型的嵌套定义" class="headerlink" title="结构体类型的嵌套定义"></a>结构体类型的嵌套定义</h3><p>之后结构体类型的定义可以利用之前所定义过的结构体类型</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128143838.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">嵌套定义的例子</div>
+</center>
+
+<h2 id="3-结构体类型变量"><a href="#3-结构体类型变量" class="headerlink" title="3. 结构体类型变量"></a>3. 结构体类型变量</h2><h3 id="1-结构体类型变量的定义"><a href="#1-结构体类型变量的定义" class="headerlink" title="1. 结构体类型变量的定义"></a>1. 结构体类型变量的定义</h3><p>方法一：使用已经<strong>定义好的结构体类型</strong>定义变量<br>方法二：在定义结构体类型的同时定义变量<br>方法三：直接定义结构体变量</p>
+<blockquote>
+<p>在这三种中，通常采用第一种。</p>
+</blockquote>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128144424.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">方法一实例：struct student为定义好的结构体类型，在其之后定义了fresher,junior两个变量</div>
+</center>
+
+
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128144621.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">方法二实例，前方为结构体类型的定义，之后所接的即为变量，之后若想继续定义变量，则需要用方法一</div>
+</center>
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128144856.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">方法三实例，没有定义结构体的类型，直接定义了变量。用这种方式，之后无法继续使用此类型定义变量，只能在这一行添加。</div>
+</center>
+
+<h3 id="2-结构体类型变量的初始化"><a href="#2-结构体类型变量的初始化" class="headerlink" title="2. 结构体类型变量的初始化"></a>2. 结构体类型变量的初始化</h3><p>与结构体类型变量的定义相对应，其有三种情形：</p>
+<ol>
+<li><p>先定义结构体类型，然后定义结构体变量，然后写上了一些内容（初始化）</p>
+</li>
+<li><p>定义结构体类型的同时定义变量，并且对它进行初始化</p>
+</li>
+<li><p>不定义结构体类型，直接定义结构体类型的变量，并且对它们初始化</p>
+</li>
+</ol>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128145726.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">情形一，注意不能整体赋值！</div>
+</center>
+
+<blockquote>
+<ol>
+<li><em><strong>结构体变量不允许整体赋值</strong></em></li>
+<li>初始化时各成员初值要与数据类型一致！</li>
+</ol>
+</blockquote>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128150350.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">情形二，同理，不能对结构体变量做整体的赋值运算</div>
+</center>
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128150734.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">情形三实例，不定义结构体类型，直接定义变量并初始化</div>
+</center>
+
+<h3 id="3-结构体类型变量的引用"><a href="#3-结构体类型变量的引用" class="headerlink" title="3. 结构体类型变量的引用"></a>3. 结构体类型变量的<strong>引用</strong></h3><p>一般形式： <strong>结构体变量名.成员名</strong></p>
+<p>注意事项：</p>
+<blockquote>
+<p>不能将结构体变量作为一个整体进行输入和输出<br>不能将两个结构体变量进行整体比较<br><strong>可以</strong>将一个结构体变量<strong>整体赋值</strong>给另一个结构体变量<br>结构体嵌套时逐级引用</p>
+</blockquote>
+<p>引用实例：</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128152357.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">赋值运算，自加运算，判断</div>
+</center>
+
+<h4 id="注意事项1："><a href="#注意事项1：" class="headerlink" title="注意事项1："></a>注意事项1：</h4><p><strong>结构体变量不能整体输入和输出和赋值！</strong></p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128152745.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">需要一一对应地输出</div>
+</center>
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128152931.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">不能整体输入，注意要加取地址符号，但是数组（char类型）的名字就是地址（首地址）</div>
+</center>
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128153623.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">结构体变量不能整体赋值。注意第二行，作为数组名，不能出现在赋值等于号的左边（因为它是常量），因此字符串的拷贝用strcpy，第六行的地址同理</div>
+</center>
+
+<h4 id="注意事项2："><a href="#注意事项2：" class="headerlink" title="注意事项2："></a>注意事项2：</h4><p>不能对结构体变量做是否相等的运算。<br>需要比较时，则将里面的每一个字段一一比较以确认相等。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128154119.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">通常此内容对应到数据库知识。注意第二行，对两个字符串进行比较时使用strcmp</div>
+</center>
+
+<h4 id="注意事项3（可以）："><a href="#注意事项3（可以）：" class="headerlink" title="注意事项3（可以）："></a>注意事项3（可以）：</h4><p>可以把一个结构体变量整体赋值给另一个！</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128154705.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">可以将stu1的所有信息赋值给stu2</div>
+</center>
+
+<h4 id="注意事项4"><a href="#注意事项4" class="headerlink" title="注意事项4"></a>注意事项4</h4><p>结构体嵌套时逐级引用！</p>
+<p>结构体类型嵌套定义，若想引用该结构体中所嵌套的另一个结构体类型的成员，中的信息，要逐级引用。</p>
+<p>如：变量名.成员名.嵌套的结构体的成员名</p>
+<p>有几层便要用几层的引用。</p>
+<h3 id="相关说明："><a href="#相关说明：" class="headerlink" title="相关说明："></a>相关说明：</h3><blockquote>
+<p>注意：结构体类型与结构体变量不可混淆！<br>结构体成员名与程序中变量名可相同，互不影响！<br>结构体可复合！</p>
+</blockquote>
+<p>关于结构体复合：<br>在结构体类型的定义内再定义另一个结构体类型<br>与嵌套的不同之处：它真的把结构体嵌进去了！</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128155854.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">结构体的复合</div>
+</center>
+
+<h2 id="4-结构体数组"><a href="#4-结构体数组" class="headerlink" title="4. 结构体数组"></a>4. 结构体数组</h2><p>结构体与数组的联系：</p>
+<blockquote>
+<p>在结构体的成员中有数组（如char name[10])<br>把数组放在外面，把结构体放在里面，便生成结构体数组。</p>
+</blockquote>
+<h3 id="结构体数组的定义"><a href="#结构体数组的定义" class="headerlink" title="结构体数组的定义"></a>结构体数组的定义</h3><p>类似于结构体变量定义的三种方法，结构体数组的定义有三种方法：</p>
+<p>一、使用已经定义好的结构体类型定义数组</p>
+<p>例子：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">stu</span>[2];</span></span><br></pre></td></tr></table></figure>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://picgo.ultramarine.cc/img/20230128161957.png"
+    height=200 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">结构体数组的分配空间</div>
+</center>
+
+<p>二、在定义结构体类型的同时定义数组</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;stu[<span class="number">2</span>];</span><br></pre></td></tr></table></figure>
+
+<p>三、直接定义结构体数组</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;stu[<span class="number">2</span>];</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-结构体数组的初始化"><a href="#2-结构体数组的初始化" class="headerlink" title="2. 结构体数组的初始化"></a>2. 结构体数组的初始化</h3><h4 id="分行初始化"><a href="#分行初始化" class="headerlink" title="分行初始化"></a>分行初始化</h4><p>所谓分行，不是局限于行数，而是初始化时，使用了多组大括号。<br>只要每个初始化信息外有大括号，就是分行初始化。</p>
+<p>例子：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">stu</span>[]=</span>&#123;&#123;<span class="number">100</span>,<span class="string">&quot;Wang Lin&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">20</span>&#125;,</span><br><span class="line">&#123;<span class="number">101</span>,<span class="string">&quot;Li Gang&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">19</span>&#125;,</span><br><span class="line">&#123;<span class="number">110</span>,<span class="string">&quot;Liu Yan&quot;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="number">19</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>全部初始化时维数（第八号方括号内的数）可省</p>
+</blockquote>
+<h4 id="顺序初始化"><a href="#顺序初始化" class="headerlink" title="顺序初始化"></a>顺序初始化</h4><p>例子：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>]</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">stu</span>[]=</span>&#123;<span class="number">100</span>,<span class="string">&quot;Wang Lin&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">20</span>,<span class="number">101</span>,<span class="string">&quot;Lin Gang&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">19</span>,<span class="number">110</span>,<span class="string">&quot;liu Yan&quot;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="number">19</span>&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>与分行初始化的区别：每个人的信息都用逗号隔开，外面没有大括号了。</p>
+</blockquote>
+<h3 id="结构体数组元素的访问"><a href="#结构体数组元素的访问" class="headerlink" title="结构体数组元素的访问"></a>结构体数组元素的访问</h3><p>语法格式： 结构体数组名[下标].成员名<br>例：<br>让一号同学的年龄加一：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">stu[<span class="number">1</span>].age++;</span><br></pre></td></tr></table></figure>
+
+<p>让零号学生姓名为ZhaoDa</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">strcpy</span>(stu[<span class="number">0</span>].name,<span class="string">&quot;ZhaoDa&quot;</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>作为数组（常量），因此不能用赋值运算，使用strcpy，把字符串拷贝到数组中</p>
+</blockquote>
+<h3 id="结构体数组应用举例："><a href="#结构体数组应用举例：" class="headerlink" title="结构体数组应用举例："></a>结构体数组应用举例：</h3><p>选举：十三人中，三人为候选人，十人为选举人，选举三人中的一人。每个人那一张纸条，上面写上”Li”或”Wang”或”Zhang”投票。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">person</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">int</span> count;</span><br><span class="line">&#125;leader[<span class="number">3</span>]=&#123;<span class="string">&quot;Li&quot;</span>,<span class="number">0</span>,<span class="string">&quot;Zhang&quot;</span>,<span class="number">0</span>,<span class="string">&quot;Wang&quot;</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line">    <span class="type">char</span> leader_name[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,leader_name);</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">3</span>;j++)</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">strcmp</span>(leader_name,leader[j].name)==<span class="number">0</span>)</span><br><span class="line">        leader[j].count++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%5s:%d\n&quot;</span>,leader[i].name,leader[i].count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-指向结构体类型数据的指针"><a href="#5-指向结构体类型数据的指针" class="headerlink" title="5.指向结构体类型数据的指针"></a>5.指向结构体类型数据的指针</h2><blockquote>
+<p>1.指向结构体变量的指针<br>2.指向结构体数组的指针<br>3.结构体变量和指向结构体的指针做函数参数</p>
+</blockquote>
+<h3 id="指向结构体变量的指针"><a href="#指向结构体变量的指针" class="headerlink" title="指向结构体变量的指针"></a>指向结构体变量的指针</h3><p>引例</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="type">int</span> *p=&amp;i;</span><br><span class="line">i=<span class="number">10</span>;</span><br><span class="line"><span class="comment">/* 上面一句等同于 *p=10; */</span></span><br></pre></td></tr></table></figure>
+<p>由此引出：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">stu1</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> *<span class="title">q</span>=</span>&amp;stu1;</span><br><span class="line">stu1.age=<span class="number">18</span>;</span><br><span class="line"><span class="comment">/* 等同于（*q).age=18; */</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：点号为单目运算符，结合性为自右向左，即可能出现忽略左侧星号*的情况。所以要带上小括号。</p>
+</blockquote>
+<p>由于写的时候容易有歧义、或者要带括号，较为麻烦，<br>因此可以用一种新的写法：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">q-&gt;age=<span class="number">18</span>;</span><br><span class="line"><span class="comment">/* 相当于 (*q).age=18 */</span></span><br></pre></td></tr></table></figure>
+<p>尤其当之后学了链表后，都是用这种方法，基本上不再用前者。</p>
+<p>定义      struct 结构体名 *指针变量；<br>赋初值    指针变量名=&amp;结构体变量；<br>访问成员  设p为指向结构体变量的指针：<br>          访问方式一：(*p).成员名<br>          访问方式二：p-&gt;成员名</p>
+<h3 id="指向结构体数组的指针"><a href="#指向结构体数组的指针" class="headerlink" title="指向结构体数组的指针"></a>指向结构体数组的指针</h3><p>定义一个数组，定义一个指针指向数组的第一个地址，指针P就可以通过自加运算访问第一、二、三······个。</p>
+<p>例：有3个学生的信息，放在结构体数组中，输出全部学生的信息</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">/*结构体数组的定义与初始化*/</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;stu[<span class="number">3</span>]=&#123;&#123;<span class="number">10101</span>,<span class="string">&quot;Li Lin&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">18</span>&#125;,&#123;<span class="number">10102</span>,<span class="string">&quot;Zhang Fun&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">19</span>&#125;,&#123;<span class="number">10104</span>,<span class="string">&quot;Wang Min&quot;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="number">20</span>&#125;&#125;;<span class="comment">/*分行初始化*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> *<span class="title">p</span>;</span></span><br><span class="line">    <span class="comment">/*定义了一个指针P，让P等于数组的名字，指向数组的首地址*/</span></span><br><span class="line">    <span class="keyword">for</span>(p=stu;p&lt;stu+<span class="number">3</span>;p++)</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">&quot;%d%s%c%d\n&quot;</span>,p-&gt;num,p-&gt;name,p-&gt;sex,p-&gt;age);</span><br><span class="line">    <span class="comment">/*都用箭头，看起来很统一*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结构体变量和指向结构体的指针作函数参数"><a href="#结构体变量和指向结构体的指针作函数参数" class="headerlink" title="结构体变量和指向结构体的指针作函数参数"></a>结构体变量和指向结构体的指针作函数参数</h3><h4 id="1-结构体变量作参数（值传递）"><a href="#1-结构体变量作参数（值传递）" class="headerlink" title="1. *结构体变量作参数（值传递）"></a>1. *结构体变量作参数（值传递）</h4><p>例：定义一个复数类型的结构体，通过函数调用，求两个复数的和。</p>
+<blockquote>
+<p>复数包括实部、虚部，结构体变量可以带多个成员。因此可以定义一个复数的结构体类型，带三个成员：实部、虚部和模。</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">complex_t</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">double</span> real;</span><br><span class="line">    <span class="type">double</span> imag;</span><br><span class="line">    <span class="type">double</span> modular;</span><br><span class="line">&#125;;<span class="comment">/*结构体类型的定义*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">add</span><span class="params">(<span class="keyword">struct</span> <span class="type">complex_t</span>,<span class="keyword">struct</span> <span class="type">complex_t</span>)</span>;<span class="comment">/*函数的声明，声明只要含有参数的数量以及类型，因此不必将参数的名字写在上面*/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">complex_t</span> <span class="title">c1</span>.<span class="title">c2</span>;</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf&quot;</span>,&amp;c1.real,&amp;c1.imag);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf&quot;</span>,&amp;c2.real,&amp;c2.imag);<span class="comment">/*分别读入C1C2的实部虚部*/</span></span><br><span class="line">    add(c1,c2);<span class="comment">/*调用add函数*/</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">add</span><span class="params">(<span class="keyword">struct</span> <span class="type">comples_t</span> c1,<span class="keyword">struct</span> <span class="type">complex_t</span> c2)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">comples_t</span> <span class="title">c</span>;</span></span><br><span class="line">    c.real=c1.real+c2.real;</span><br><span class="line">    c.imag=c1.imag+c2.imag;</span><br><span class="line">    c.modular=<span class="built_in">sqrt</span>(c.real*c.real+c.imag*c.imag);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lf,%lf,%lf\n&quot;</span>,c.real,c.imag,c.modular);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="结构体数组作为函数参数"><a href="#结构体数组作为函数参数" class="headerlink" title="结构体数组作为函数参数"></a>结构体数组作为函数参数</h4><p>（例题：学生的记录由学号和成绩组成，N名学生的数据已在主函数中放入结构体数组s中，请编写函数fun，其功能是：把分数最低的学生数据放在h所指的数组中。<em>注意：分数最低的学生可能不止一个，函数返回分数最低的学生的人数。</em>）</p>
+<p>通过结构体数组作为参数的形式实现排序</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">SortData</span><span class="params">(<span class="keyword">struct</span> student *pstu,<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">temp</span>;</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)</span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n<span class="number">-1</span>-i;j++)</span><br><span class="line">    <span class="keyword">if</span>(pstu[j].sum&lt;pstu[j+<span class="number">1</span>].sum)</span><br><span class="line">    &#123;</span><br><span class="line">        temp=pstu[j];</span><br><span class="line">        pstu[j]=pstu[j+<span class="number">1</span>];</span><br><span class="line">        pstu[j+<span class="number">1</span>]=temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*冒泡排序算法*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="函数的返回值是结构体类型"><a href="#函数的返回值是结构体类型" class="headerlink" title="函数的返回值是结构体类型"></a>函数的返回值是结构体类型</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="type">complex_t</span> <span class="title function_">add</span><span class="params">(<span class="keyword">struct</span> <span class="type">complex_t</span> c1,<span class="keyword">struct</span> <span class="type">complex_t</span> c2)</span><span class="comment">/*可以看出，函数的返回值是结构体类型*/</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">complex_t</span> <span class="title">c</span>;</span></span><br><span class="line">    c.real=c1.real+c2.real;</span><br><span class="line">    c.imag=c1.imag+c2.imag;</span><br><span class="line">    c.modular=<span class="built_in">sqrt</span>(c.real*c.real+c.imag*c.imag);</span><br><span class="line">    <span class="keyword">return</span> c;<span class="comment">/*返回C（多值返回），尽管只返回一个C，但C可以待会多个东西*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>主函数的写法：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">complex_t</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">double</span> real;</span><br><span class="line">    <span class="type">double</span> imag;</span><br><span class="line">    <span class="type">double</span> modular;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> <span class="type">complex_t</span> <span class="title function_">add</span><span class="params">(<span class="keyword">struct</span> <span class="type">complex_t</span>,<span class="keyword">struct</span> <span class="type">complex_t</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">complex_t</span> <span class="title">c</span>,<span class="title">c1</span>,<span class="title">c2</span>;</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf&quot;</span>,&amp;c1.real,&amp;c1.imag);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf&quot;</span>,&amp;c2.real,&amp;c2.imag);</span><br><span class="line">    c=add(c1,c2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lf,%lf,%lf\n&quot;</span>,c.real,c.imag,c.moudlar);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;<span class="comment">/*主函数所做的事：数据的输入、函数的调用、数据的输出*/</span></span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<blockquote>
+<p>设一个班级有三十个人，学生信息包括姓名、学号外、三科成绩。利用函数的返回值找出总分最高分和最低的学生的信息。</p>
+</blockquote>
+<p>函数只能返回一个回来，如何解决这个问题——可以用指针带回来一些值</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 30</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];<span class="comment">/*学生姓名*/</span></span><br><span class="line">    <span class="type">long</span> num;<span class="comment">/*学号*/</span></span><br><span class="line">    <span class="type">float</span> score[<span class="number">3</span>];<span class="comment">/*三科考试成绩*/</span></span><br><span class="line">    <span class="type">float</span> sum;<span class="comment">/*总成绩*/</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> student <span class="title function_">max</span><span class="params">(<span class="keyword">struct</span> student [],<span class="keyword">struct</span> student *<span class="comment">/*用这个指针带回来一些值*/</span>,<span class="type">int</span>)</span>;<span class="comment">/*在函数声明时只要写类型*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">inputdata</span><span class="params">(<span class="keyword">struct</span> student stu[],<span class="type">int</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">inputdata</span><span class="params">(<span class="keyword">struct</span> student stu[],<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)<span class="comment">/*一重循环*/</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s %ld %f %f %f&quot;</span>,stu[i].name,&amp;stu[i].num,&amp;stu[i].score[<span class="number">0</span>],&amp;stu[i].score[<span class="number">1</span>],&amp;stu[i].score[<span class="number">2</span>]);</span><br><span class="line">        stu[i].sum=(stu[i].score[<span class="number">0</span>]+stu[i].scpre[<span class="number">1</span>]+stu[i].scpre[<span class="number">2</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">struct</span> student <span class="title function_">max</span><span class="params">(<span class="keyword">struct</span> student stu[],<span class="keyword">struct</span> student *s,<span class="type">int</span> n)</span><span class="comment">/*第一个参数为结构体数组，第二个参数为结构体指针，结构体指针可以用来返回最小值）*/</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">t</span>;</span></span><br><span class="line">    <span class="type">int</span> i;<span class="comment">/*会出现循环，所以定义i*/</span></span><br><span class="line">    <span class="type">float</span> m,p;<span class="comment">/*存放最高分最低分的分值*/</span></span><br><span class="line">    m=p=stu[<span class="number">0</span>].sum;<span class="comment">/*让分值m,p都等于0号同学的sun*/</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(m&lt;=stu[i].sum)</span><br><span class="line">        &#123;</span><br><span class="line">            m=stu[i].sum;</span><br><span class="line">            t=stu[i];</span><br><span class="line">        &#125;<span class="comment">/*找最高分*/</span></span><br><span class="line">        <span class="keyword">if</span>(p&gt;=stu[i].sum)</span><br><span class="line">        &#123;</span><br><span class="line">            p=stu[i].sum</span><br><span class="line">            *s=stu[i];<span class="comment">/*用主函数的指针，因为return时只能返回一个值*/</span></span><br><span class="line">        &#125;<span class="comment">/*找最低分*/</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> t;<span class="comment">/*只能返回一个值，最低分的人的信息用指针S带回*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">st</span>[<span class="title">N</span>],<span class="title">maxst</span>,<span class="title">minst</span>;</span></span><br><span class="line">    inputdata(st,N);</span><br><span class="line">    maxst=max(st,&amp;minst,N);<span class="comment">/*定义minst,指针S指向minst的地址,则可以用*s带回需要的值*/</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;最高分学生信息：\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s %ld %.2f %.2f %.2f %.2f\n&quot;</span>,maxst.name,maxst.num,maxst.score[<span class="number">0</span>],maxst.score[<span class="number">1</span>],maxst.scpre[<span class="number">2</span>],maxst.sum);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;最低分学生信息：\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s %ld %.2f %.2f %.2f %.2f\n&quot;</span>,minst.name,minst.num,minst.score[<span class="number">0</span>],minst.score[<span class="number">1</span>],minst.score[<span class="number">2</span>],minst.sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-          
-          <category> 更新 </category>
-          
+        <category>C语言</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 更新 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
 </search>
