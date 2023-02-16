@@ -2468,3 +2468,9 @@ ul.breadcrumb li:last-child {
     margin-bottom: 10px;
   }
 }
+body {
+  background: url("/images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 100% 100%;
+}
