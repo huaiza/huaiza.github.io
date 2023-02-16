@@ -412,7 +412,7 @@
 		seconds - 0-59之间的整数，做为date对象的秒数
 		microseconds - 0-999之间的整数，做为date对象的毫秒数
         */
-		var t1 = Date.UTC(1848,2,21,00,00,00); //UTC零时，即北京时间的八时（东八区）。网站真正的建立时间是2022年12月18日20：00：00
+		var t1 = Date.UTC(2022,12,18,20,00,00); //UTC零时，即北京时间的八时（东八区）。网站真正的建立时间是2022年12月18日20：00：00
 		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
 		var diff = t2-t1;
 		var diffYears = Math.floor(diff/years);
