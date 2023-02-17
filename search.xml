@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>某些笔记</title>
+      <link href="/2023/02/17/%E6%9F%90%E4%BA%9B%E7%AC%94%E8%AE%B0/"/>
+      <url>/2023/02/17/%E6%9F%90%E4%BA%9B%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="短路效应"><a href="#短路效应" class="headerlink" title="短路效应"></a>短路效应</h2><p>常见的逻辑运算符有三种，即 “与 &amp;”，“或 || ”，“非! ” </p><p>短路效应发生在下面两种情况：</p><p>if(A &amp;&amp; B) // 若 A 为 false ，则 B 的判断不会执行，提前跳出（即短路），判定 A &amp;&amp; B 为 false<br>if(A || B) // 若 A 为 true ，则 B 的判断不会执行，提前跳出（即短路），判定 A || B 为 true  </p><hr><p>字符与ASCII码<br>A—–65<br>a—–97<br>(空格)—–32<br>0—–48  </p><hr><p>C语言标识符第一个字符必须为字母或下划线（不能是数字）   </p><hr><p>字符常量中有”\ddd”(三位八进制，每个数应该大于一)和（\xhh）（两位十六进制数)</p><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> C语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C语言基础：结构体</title>
       <link href="/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/"/>
       <url>/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/</url>
