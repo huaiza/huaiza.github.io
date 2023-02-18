@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>建站小记</title>
+    <url>/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="本站梗概"><a href="#本站梗概" class="headerlink" title="本站梗概"></a>本站梗概</h1><p>    本站是博主的个人博客，基于Hexo搭建，采用Butterfly主题，网站的文件托管在Github仓库和Vercel上。在搭建过程中主要参考了<a href="https://www.fomal.cc/">Fomalhaut🥝</a> 的文章及发布在B站的同步视频。
+    </p>
+<h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p> &gt;  12月16日晚，博主打开了许久未用的收音机。在晴朗的晚上，收音机能接收到的短波信号比以往更强。我检索到了一个清晰的日语频道，出于好奇，我在网络上 搜索该频道，试图查找它的相关信息。在网上冲浪期间，我发现了不少个人博客，博主在其中分享生活随笔与知识教程。由此激发的兴趣让我也搭建一个个人博客。</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><blockquote>
+<p> 必应搜索关键词“制作个人博客”的显示的第一个结果便是一篇知乎文章。通过它的指导，我完成了Git的安装，电脑与Github的连结。<br> 在这之后，我便主要参考Fomalhaut的教程，完成Hexo的搭建与主题的下载安装，将静态博客挂载到Github Pages上，并将文件托管在Vercel上。<br> 目前的网站文件是我第二次重新做的。一开始网站文件在我上传时报错了，而报错的地方是某两个我从来没改动过的文件，当时尝试无果，无法解决（之后再次实践才发现是配置文件的某个内容不准确导致的），并且github的库中也没有完整的根目录文件夹，只有“.deploy_git”文件夹中的内容。于是我只好删除重做。<br> （事实证明备份文件至关重要）（不是</p>
+</blockquote>
+<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><blockquote>
+<p>图床，指用于储存图片的服务器。这是整个搭建过程中最折磨我的地方。</p>
+<p>首先按照教程建立的基于Github仓库的图床延迟太大，就算用免费的cdn加速，加载一张图片也要十几秒。由于当时还没有域名，无法把图床部署在Vercel上。于是我又参考第三种方法，注册了Cloudflare，但是无法通过网站给出的域名打开图片。</p>
+<p>于是，我尝试国内的免费图床。由于服务器在国内，免费图床的加载速度极快。但是，免费图床限制图片文件的大小，所给的图片链接也存在失效的风险。更为重要的是，我尝试将图片设置为文章封面后，封面图片便会显示“图片损坏”（当然这也可能是网站的其他文件未设置好导致的）。总之，在当时，上述没有一种方法能实现正常加载图片。</p>
+<p>后来我参照其他教程，从Github上下载并安装了Picgo,用来更方便地上传图片和复制图片链接。该教程给出了两种Picgo的上传路径——github仓库和vika。我下载的Picgo的版本并不支持vika,且我无法找到其他版本的资源。至于github仓库……经实践证明它的加载和上传速度依旧很慢,以至于在Picgo的图库页面都无法显示图片。</p>
+<p>最后，我在七牛云建立对象储存，将Picgo连接至七牛云。至此，我才完成了图床的建立。</p>
+</blockquote>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><blockquote>
+<p>由于在国内平台注册域名需要个人信息审核，我在提交资料后等了大概两天才注册域名。<br>本站的域名为 ultramarine.cc  。这个域名挺长的，很难让人记住。Ultramarine是矿物颜料群青的英文单词，如果这样说的话就比较好记了。（应该吧<br>这个域名从视觉上看比较美观（没有特别突兀的字母，大写的U与l同高，整体高度变化平缓），意义指向上也比较美观（群青是一种美丽的、来自阿富汗兴都库什山脉的颜料）。<br>除此以外没有其他特殊含义。</p>
+</blockquote>
+<p>本站目前还在建设当中后续还会添加留言评论、时钟、图库、RSS，以及网站介绍。后续网站还会魔改与完善，敬请期待。</p>
+]]></content>
+      <categories>
+        <category>更新</category>
+      </categories>
+      <tags>
+        <tag>更新</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于网站图片目前无法加载的解释</title>
+    <url>/2023/01/21/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E5%9B%BE%E7%89%87%E7%9B%AE%E5%89%8D%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<p>2023/1/21：<br>本网站的图片均储存在七牛云的对象储存中。在没有外链域名时，七牛云无法提供图片的预览、下载、复制外链。而绑定外链需要让网站提前通过网站公安备案，否则无法在国内提供网络服务。<br>目前正在申请网站公安备案。</p>
+<hr>
+<p>2023/1/22凌晨更新：<br>  申请网站公安备案需要提供网络接入商的信息、电话、地址，而我的网站托管在Vercel上，该平台并不在国内，且网络上无法查到Vercel相关的联系电话。同时，我的网站目前没有申请工信部ICP备案（备案需要通过阿里云一类的云服务平台，个人无法单独办理。只有购买了该平台的产品，比如服务器，才能获得备案的资格）。无论是公安备案还是ICP备案，都需要不下十天的时间。整个过程需要花费不少的时间与经济成本。</p>
+<p>  让我们再将目光移回Vercel。在建站之初，我尝试过用Vercel部署图床（详情请见<a href="https://www.ultramarine.cc/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/">建站小记</a>），但当时由于没有域名，并没有成功部署，单纯使用Github时延迟过大。</p>
+<p>  我一直秉持着能省则省的原则，如果能够白嫖，那便是极好的。等明天我会具体实践一下，图片无法加载的问题预计很快就能解决。</p>
+]]></content>
+      <categories>
+        <category>更新</category>
+      </categories>
+      <tags>
+        <tag>更新</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>耶，复活了</title>
     <url>/2023/01/22/%E8%80%B6%EF%BC%8C%E5%A4%8D%E6%B4%BB%E4%BA%86/</url>
     <content><![CDATA[<h1 id="耶，复活了"><a href="#耶，复活了" class="headerlink" title="耶，复活了"></a>耶，复活了</h1><h2 id="首先，新年快乐！"><a href="#首先，新年快乐！" class="headerlink" title="首先，新年快乐！"></a><font color=#ed3333>首先，新年快乐！</font><br /></h2><p>网站的图片已经逐步恢复。</p>
@@ -43,46 +87,6 @@
       </div>
 </center>
 ]]></content>
-  </entry>
-  <entry>
-    <title>整点薯条-FALSEKNEES漫画分享</title>
-    <url>/2023/01/06/%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-FALSEKNEES%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<blockquote>
-<p>新的url链接已经更换好了。<br><del>旧的url链接已经失效，图片暂时无法查看。估计很快就会更换……吧</del></p>
-</blockquote>
-<p><img src="https://picgo.ultramarine.cc/img/m0.jpg"><br><img src="https://picgo.ultramarine.cc/img/m1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m2.jpg"><br><img src="https://picgo.ultramarine.cc/img/m3.1.webp"><br><img src="https://picgo.ultramarine.cc/img/m3.jpg"><br><img src="https://picgo.ultramarine.cc/img/m4.1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m4.jpg"><br><img src="https://picgo.ultramarine.cc/img/m5.jpg"><br><img src="https://picgo.ultramarine.cc/img/m6.jpg"><br><img src="https://picgo.ultramarine.cc/img/m7.jpg"><br><img src="https://picgo.ultramarine.cc/img/m8.1.webp"><br><img src="https://picgo.ultramarine.cc/img/m8.jpg"><br><img src="https://picgo.ultramarine.cc/img/m9.jpg"><br><img src="https://picgo.ultramarine.cc/img/m10.jpg"><br><img src="https://picgo.ultramarine.cc/img/m11.jpg"><br><img src="https://picgo.ultramarine.cc/img/m12.jpg"><br><img src="https://picgo.ultramarine.cc/img/m13.jpg"><br><img src="https://picgo.ultramarine.cc/img/m14.jpg"><br><img src="https://picgo.ultramarine.cc/img/m15.jpg"><br><img src="https://picgo.ultramarine.cc/img/m16.jpg"><br><img src="https://picgo.ultramarine.cc/img/m17.jpg"><br><img src="https://picgo.ultramarine.cc/img/m18.jpg"><br><img src="https://picgo.ultramarine.cc/img/m19.jpg"><br><img src="https://picgo.ultramarine.cc/img/m20.jpg"><br><img src="https://picgo.ultramarine.cc/img/m21.jpg"><br><img src="https://picgo.ultramarine.cc/img/m22.jpg"><br><img src="https://picgo.ultramarine.cc/img/m23.jpg"><br><img src="https://picgo.ultramarine.cc/img/m24.jpg"><br><img src="https://picgo.ultramarine.cc/img/m25.jpg"><br><img src="https://picgo.ultramarine.cc/img/m26.jpg"><br><img src="https://picgo.ultramarine.cc/img/m27.jpg"><br><img src="https://picgo.ultramarine.cc/img/m28.jpg"><br><img src="https://picgo.ultramarine.cc/img/m29.jpg"><br><img src="https://picgo.ultramarine.cc/img/m30.jpg"><br><img src="https://picgo.ultramarine.cc/img/m31.jpg"><br><img src="https://picgo.ultramarine.cc/img/m32.jpg"><br><img src="https://picgo.ultramarine.cc/img/m33.jpg"><br><img src="https://picgo.ultramarine.cc/img/m34.jpg"><br><img src="https://picgo.ultramarine.cc/img/m35.jpg"><br><img src="https://picgo.ultramarine.cc/img/m36.jpg"><br><img src="https://picgo.ultramarine.cc/img/m37.jpg"><br><img src="https://picgo.ultramarine.cc/img/m38.jpg"><br><img src="https://picgo.ultramarine.cc/img/m39.jpg"><br><img src="https://picgo.ultramarine.cc/img/m40.jpg"><br><img src="https://picgo.ultramarine.cc/img/m41.jpg"><br><img src="https://picgo.ultramarine.cc/img/m42.jpg"><br><img src="https://picgo.ultramarine.cc/img/m43.jpg"><br><img src="https://picgo.ultramarine.cc/img/m44.jpg"><br><img src="https://picgo.ultramarine.cc/img/m45.jpg"><br><img src="https://picgo.ultramarine.cc/img/m46.jpg"><br><img src="https://picgo.ultramarine.cc/img/m47.jpg"><br><img src="https://picgo.ultramarine.cc/img/m48.jpg"><br><img src="https://picgo.ultramarine.cc/img/m49.jpg"><br><img src="https://picgo.ultramarine.cc/img/m50.jpg"><br><img src="https://picgo.ultramarine.cc/img/m51.jpg"><br><img src="https://picgo.ultramarine.cc/img/m52.jpg"><br><img src="https://picgo.ultramarine.cc/img/m53.jpg"><br><img src="https://picgo.ultramarine.cc/img/m54.jpg"><br><img src="https://picgo.ultramarine.cc/img/m55.jpg"><br><img src="https://picgo.ultramarine.cc/img/m56.jpg"><br><img src="https://picgo.ultramarine.cc/img/m57.jpg"><br><img src="https://picgo.ultramarine.cc/img/m58.jpg"><br><img src="https://picgo.ultramarine.cc/img/m59.jpg"><br><img src="https://picgo.ultramarine.cc/img/m60.jpg"><br><img src="https://picgo.ultramarine.cc/img/m61.jpg"><br><img src="https://picgo.ultramarine.cc/img/m62.jpg"><br><img src="https://picgo.ultramarine.cc/img/m63.jpg"><br><img src="https://picgo.ultramarine.cc/img/m64.jpg"><br><img src="https://picgo.ultramarine.cc/img/m65.jpg"><br><img src="https://picgo.ultramarine.cc/img/m66.jpg"><br><img src="https://picgo.ultramarine.cc/img/m67.jpg"><br><img src="https://picgo.ultramarine.cc/img/m68.jpg"><br><img src="https://picgo.ultramarine.cc/img/m69.jpg"><br><img src="https://picgo.ultramarine.cc/img/m70.jpg"><br><img src="https://picgo.ultramarine.cc/img/m71.jpg"><br><img src="https://picgo.ultramarine.cc/img/m72.jpg"><br><img src="https://picgo.ultramarine.cc/img/m73.jpg"><br><img src="https://picgo.ultramarine.cc/img/m74.jpg"><br><img src="https://picgo.ultramarine.cc/img/m75.jpg"><br><img src="https://picgo.ultramarine.cc/img/m76.jpg"><br><img src="https://picgo.ultramarine.cc/img/m77.jpg"><br><img src="https://picgo.ultramarine.cc/img/m78.jpg"><br><img src="https://picgo.ultramarine.cc/img/m79.jpg"><br><img src="https://picgo.ultramarine.cc/img/m80.jpg"><br><img src="https://picgo.ultramarine.cc/img/m81.jpg"><br><img src="https://picgo.ultramarine.cc/img/m82.jpg"><br><img src="https://picgo.ultramarine.cc/img/m83.jpg"><br><img src="https://picgo.ultramarine.cc/img/m84.jpg"><br><img src="https://picgo.ultramarine.cc/img/m85.jpg"><br><img src="https://picgo.ultramarine.cc/img/m86.jpg"><br><img src="https://picgo.ultramarine.cc/img/m87.jpg"><br><img src="https://picgo.ultramarine.cc/img/m88.jpg"><br><img src="https://picgo.ultramarine.cc/img/m89.jpg"><br><img src="https://picgo.ultramarine.cc/img/m90.jpg"><br><img src="https://picgo.ultramarine.cc/img/m92.1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m92.webp"><br><img src="https://picgo.ultramarine.cc/img/m93.webp"><br><img src="https://picgo.ultramarine.cc/img/m94.jpg"></p>
-]]></content>
-      <tags>
-        <tag>图库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>建站小记</title>
-    <url>/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="本站梗概"><a href="#本站梗概" class="headerlink" title="本站梗概"></a>本站梗概</h1><p>    本站是博主的个人博客，基于Hexo搭建，采用Butterfly主题，网站的文件托管在Github仓库和Vercel上。在搭建过程中主要参考了<a href="https://www.fomal.cc/">Fomalhaut🥝</a> 的文章及发布在B站的同步视频。
-    </p>
-<h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p> &gt;  12月16日晚，博主打开了许久未用的收音机。在晴朗的晚上，收音机能接收到的短波信号比以往更强。我检索到了一个清晰的日语频道，出于好奇，我在网络上 搜索该频道，试图查找它的相关信息。在网上冲浪期间，我发现了不少个人博客，博主在其中分享生活随笔与知识教程。由此激发的兴趣让我也搭建一个个人博客。</p>
-<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><blockquote>
-<p> 必应搜索关键词“制作个人博客”的显示的第一个结果便是一篇知乎文章。通过它的指导，我完成了Git的安装，电脑与Github的连结。<br> 在这之后，我便主要参考Fomalhaut的教程，完成Hexo的搭建与主题的下载安装，将静态博客挂载到Github Pages上，并将文件托管在Vercel上。<br> 目前的网站文件是我第二次重新做的。一开始网站文件在我上传时报错了，而报错的地方是某两个我从来没改动过的文件，当时尝试无果，无法解决（之后再次实践才发现是配置文件的某个内容不准确导致的），并且github的库中也没有完整的根目录文件夹，只有“.deploy_git”文件夹中的内容。于是我只好删除重做。<br> （事实证明备份文件至关重要）（不是</p>
-</blockquote>
-<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><blockquote>
-<p>图床，指用于储存图片的服务器。这是整个搭建过程中最折磨我的地方。</p>
-<p>首先按照教程建立的基于Github仓库的图床延迟太大，就算用免费的cdn加速，加载一张图片也要十几秒。由于当时还没有域名，无法把图床部署在Vercel上。于是我又参考第三种方法，注册了Cloudflare，但是无法通过网站给出的域名打开图片。</p>
-<p>于是，我尝试国内的免费图床。由于服务器在国内，免费图床的加载速度极快。但是，免费图床限制图片文件的大小，所给的图片链接也存在失效的风险。更为重要的是，我尝试将图片设置为文章封面后，封面图片便会显示“图片损坏”（当然这也可能是网站的其他文件未设置好导致的）。总之，在当时，上述没有一种方法能实现正常加载图片。</p>
-<p>后来我参照其他教程，从Github上下载并安装了Picgo,用来更方便地上传图片和复制图片链接。该教程给出了两种Picgo的上传路径——github仓库和vika。我下载的Picgo的版本并不支持vika,且我无法找到其他版本的资源。至于github仓库……经实践证明它的加载和上传速度依旧很慢,以至于在Picgo的图库页面都无法显示图片。</p>
-<p>最后，我在七牛云建立对象储存，将Picgo连接至七牛云。至此，我才完成了图床的建立。</p>
-</blockquote>
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><blockquote>
-<p>由于在国内平台注册域名需要个人信息审核，我在提交资料后等了大概两天才注册域名。<br>本站的域名为 ultramarine.cc  。这个域名挺长的，很难让人记住。Ultramarine是矿物颜料群青的英文单词，如果这样说的话就比较好记了。（应该吧<br>这个域名从视觉上看比较美观（没有特别突兀的字母，大写的U与l同高，整体高度变化平缓），意义指向上也比较美观（群青是一种美丽的、来自阿富汗兴都库什山脉的颜料）。<br>除此以外没有其他特殊含义。</p>
-</blockquote>
-<p>本站目前还在建设当中后续还会添加留言评论、时钟、图库、RSS，以及网站介绍。后续网站还会魔改与完善，敬请期待。</p>
-]]></content>
-      <categories>
-        <category>更新</category>
-      </categories>
-      <tags>
-        <tag>更新</tag>
-      </tags>
   </entry>
   <entry>
     <title>角堇&amp;三色堇种植</title>
@@ -224,12 +228,26 @@
       阳光的反射
       </div>
 </center>
-## 结尾
-十二月中旬，由于疫情扩散，我们便开始了返乡。
 
-<p>那时两盆角堇都还未结花蕾，最小的那盆里的植株才刚刚长好四片真叶。</p>
-<p>无论如何，我无法目睹它们的开花了。</p>
-<p>将两大盆花带回家必然是不太可行的，我也只能将它们留在学校，放在宿舍楼底的露天花坛里，冬季紊乱的流云大概会带来它需要的养分吧。</p>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>十二月中旬，由于疫情扩散，我们便开始了返乡。  </p>
+<p>那时两盆角堇都还未结花蕾，最小的那盆里的植株才刚刚长好四片真叶。  </p>
+<p>无论如何，我无法目睹它们的开花了。  </p>
+<p>将两大盆花带回家必然是不太可行的，我也只能将它们留在学校，放在宿舍楼底的露天花坛里，冬季紊乱的流云大概会带来它需要的养分吧。  </p>
+<h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>2月18日，我又再次见到了这盆花。在此非常感谢宿管阿姨把它移到了室内，避免了受冻。<br>可惜的是  </p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://music.ciallo.tech/img/jiaojin223.jpg" height=250 alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      有些株已经有了小花苞，应该还可以抢救一下吧...
+      </div>
+</center>
+
+<p>好吧，可以准备春播了……</p>
 ]]></content>
       <categories>
         <category>园艺</category>
@@ -265,22 +283,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于网站图片目前无法加载的解释</title>
-    <url>/2023/01/21/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E5%9B%BE%E7%89%87%E7%9B%AE%E5%89%8D%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<p>2023/1/21：<br>本网站的图片均储存在七牛云的对象储存中。在没有外链域名时，七牛云无法提供图片的预览、下载、复制外链。而绑定外链需要让网站提前通过网站公安备案，否则无法在国内提供网络服务。<br>目前正在申请网站公安备案。</p>
-<hr>
-<p>2023/1/22凌晨更新：<br>  申请网站公安备案需要提供网络接入商的信息、电话、地址，而我的网站托管在Vercel上，该平台并不在国内，且网络上无法查到Vercel相关的联系电话。同时，我的网站目前没有申请工信部ICP备案（备案需要通过阿里云一类的云服务平台，个人无法单独办理。只有购买了该平台的产品，比如服务器，才能获得备案的资格）。无论是公安备案还是ICP备案，都需要不下十天的时间。整个过程需要花费不少的时间与经济成本。</p>
-<p>  让我们再将目光移回Vercel。在建站之初，我尝试过用Vercel部署图床（详情请见<a href="https://www.ultramarine.cc/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/">建站小记</a>），但当时由于没有域名，并没有成功部署，单纯使用Github时延迟过大。</p>
-<p>  我一直秉持着能省则省的原则，如果能够白嫖，那便是极好的。等明天我会具体实践一下，图片无法加载的问题预计很快就能解决。</p>
-]]></content>
-      <categories>
-        <category>更新</category>
-      </categories>
-      <tags>
-        <tag>更新</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2022/12/21/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -305,24 +307,15 @@
       </tags>
   </entry>
   <entry>
-    <title>某些笔记</title>
-    <url>/2023/02/17/%E6%9F%90%E4%BA%9B%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="短路效应"><a href="#短路效应" class="headerlink" title="短路效应"></a>短路效应</h2><p>常见的逻辑运算符有三种，即 “与 &amp;”，“或 || ”，“非! ” </p>
-<p>短路效应发生在下面两种情况：</p>
-<p>if(A &amp;&amp; B) // 若 A 为 false ，则 B 的判断不会执行，提前跳出（即短路），判定 A &amp;&amp; B 为 false<br>if(A || B) // 若 A 为 true ，则 B 的判断不会执行，提前跳出（即短路），判定 A || B 为 true  </p>
-<hr>
-<p>字符与ASCII码<br>A—–65<br>a—–97<br>(空格)—–32<br>0—–48  </p>
-<hr>
-<p>C语言标识符第一个字符必须为字母或下划线（不能是数字）   </p>
-<hr>
-<p>字符常量中有”\ddd”(三位八进制，每个数应该大于一)和（\xhh）（两位十六进制数)</p>
-<hr>
+    <title>整点薯条-FALSEKNEES漫画分享</title>
+    <url>/2023/01/06/%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-FALSEKNEES%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<blockquote>
+<p>新的url链接已经更换好了。<br><del>旧的url链接已经失效，图片暂时无法查看。估计很快就会更换……吧</del></p>
+</blockquote>
+<p><img src="https://picgo.ultramarine.cc/img/m0.jpg"><br><img src="https://picgo.ultramarine.cc/img/m1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m2.jpg"><br><img src="https://picgo.ultramarine.cc/img/m3.1.webp"><br><img src="https://picgo.ultramarine.cc/img/m3.jpg"><br><img src="https://picgo.ultramarine.cc/img/m4.1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m4.jpg"><br><img src="https://picgo.ultramarine.cc/img/m5.jpg"><br><img src="https://picgo.ultramarine.cc/img/m6.jpg"><br><img src="https://picgo.ultramarine.cc/img/m7.jpg"><br><img src="https://picgo.ultramarine.cc/img/m8.1.webp"><br><img src="https://picgo.ultramarine.cc/img/m8.jpg"><br><img src="https://picgo.ultramarine.cc/img/m9.jpg"><br><img src="https://picgo.ultramarine.cc/img/m10.jpg"><br><img src="https://picgo.ultramarine.cc/img/m11.jpg"><br><img src="https://picgo.ultramarine.cc/img/m12.jpg"><br><img src="https://picgo.ultramarine.cc/img/m13.jpg"><br><img src="https://picgo.ultramarine.cc/img/m14.jpg"><br><img src="https://picgo.ultramarine.cc/img/m15.jpg"><br><img src="https://picgo.ultramarine.cc/img/m16.jpg"><br><img src="https://picgo.ultramarine.cc/img/m17.jpg"><br><img src="https://picgo.ultramarine.cc/img/m18.jpg"><br><img src="https://picgo.ultramarine.cc/img/m19.jpg"><br><img src="https://picgo.ultramarine.cc/img/m20.jpg"><br><img src="https://picgo.ultramarine.cc/img/m21.jpg"><br><img src="https://picgo.ultramarine.cc/img/m22.jpg"><br><img src="https://picgo.ultramarine.cc/img/m23.jpg"><br><img src="https://picgo.ultramarine.cc/img/m24.jpg"><br><img src="https://picgo.ultramarine.cc/img/m25.jpg"><br><img src="https://picgo.ultramarine.cc/img/m26.jpg"><br><img src="https://picgo.ultramarine.cc/img/m27.jpg"><br><img src="https://picgo.ultramarine.cc/img/m28.jpg"><br><img src="https://picgo.ultramarine.cc/img/m29.jpg"><br><img src="https://picgo.ultramarine.cc/img/m30.jpg"><br><img src="https://picgo.ultramarine.cc/img/m31.jpg"><br><img src="https://picgo.ultramarine.cc/img/m32.jpg"><br><img src="https://picgo.ultramarine.cc/img/m33.jpg"><br><img src="https://picgo.ultramarine.cc/img/m34.jpg"><br><img src="https://picgo.ultramarine.cc/img/m35.jpg"><br><img src="https://picgo.ultramarine.cc/img/m36.jpg"><br><img src="https://picgo.ultramarine.cc/img/m37.jpg"><br><img src="https://picgo.ultramarine.cc/img/m38.jpg"><br><img src="https://picgo.ultramarine.cc/img/m39.jpg"><br><img src="https://picgo.ultramarine.cc/img/m40.jpg"><br><img src="https://picgo.ultramarine.cc/img/m41.jpg"><br><img src="https://picgo.ultramarine.cc/img/m42.jpg"><br><img src="https://picgo.ultramarine.cc/img/m43.jpg"><br><img src="https://picgo.ultramarine.cc/img/m44.jpg"><br><img src="https://picgo.ultramarine.cc/img/m45.jpg"><br><img src="https://picgo.ultramarine.cc/img/m46.jpg"><br><img src="https://picgo.ultramarine.cc/img/m47.jpg"><br><img src="https://picgo.ultramarine.cc/img/m48.jpg"><br><img src="https://picgo.ultramarine.cc/img/m49.jpg"><br><img src="https://picgo.ultramarine.cc/img/m50.jpg"><br><img src="https://picgo.ultramarine.cc/img/m51.jpg"><br><img src="https://picgo.ultramarine.cc/img/m52.jpg"><br><img src="https://picgo.ultramarine.cc/img/m53.jpg"><br><img src="https://picgo.ultramarine.cc/img/m54.jpg"><br><img src="https://picgo.ultramarine.cc/img/m55.jpg"><br><img src="https://picgo.ultramarine.cc/img/m56.jpg"><br><img src="https://picgo.ultramarine.cc/img/m57.jpg"><br><img src="https://picgo.ultramarine.cc/img/m58.jpg"><br><img src="https://picgo.ultramarine.cc/img/m59.jpg"><br><img src="https://picgo.ultramarine.cc/img/m60.jpg"><br><img src="https://picgo.ultramarine.cc/img/m61.jpg"><br><img src="https://picgo.ultramarine.cc/img/m62.jpg"><br><img src="https://picgo.ultramarine.cc/img/m63.jpg"><br><img src="https://picgo.ultramarine.cc/img/m64.jpg"><br><img src="https://picgo.ultramarine.cc/img/m65.jpg"><br><img src="https://picgo.ultramarine.cc/img/m66.jpg"><br><img src="https://picgo.ultramarine.cc/img/m67.jpg"><br><img src="https://picgo.ultramarine.cc/img/m68.jpg"><br><img src="https://picgo.ultramarine.cc/img/m69.jpg"><br><img src="https://picgo.ultramarine.cc/img/m70.jpg"><br><img src="https://picgo.ultramarine.cc/img/m71.jpg"><br><img src="https://picgo.ultramarine.cc/img/m72.jpg"><br><img src="https://picgo.ultramarine.cc/img/m73.jpg"><br><img src="https://picgo.ultramarine.cc/img/m74.jpg"><br><img src="https://picgo.ultramarine.cc/img/m75.jpg"><br><img src="https://picgo.ultramarine.cc/img/m76.jpg"><br><img src="https://picgo.ultramarine.cc/img/m77.jpg"><br><img src="https://picgo.ultramarine.cc/img/m78.jpg"><br><img src="https://picgo.ultramarine.cc/img/m79.jpg"><br><img src="https://picgo.ultramarine.cc/img/m80.jpg"><br><img src="https://picgo.ultramarine.cc/img/m81.jpg"><br><img src="https://picgo.ultramarine.cc/img/m82.jpg"><br><img src="https://picgo.ultramarine.cc/img/m83.jpg"><br><img src="https://picgo.ultramarine.cc/img/m84.jpg"><br><img src="https://picgo.ultramarine.cc/img/m85.jpg"><br><img src="https://picgo.ultramarine.cc/img/m86.jpg"><br><img src="https://picgo.ultramarine.cc/img/m87.jpg"><br><img src="https://picgo.ultramarine.cc/img/m88.jpg"><br><img src="https://picgo.ultramarine.cc/img/m89.jpg"><br><img src="https://picgo.ultramarine.cc/img/m90.jpg"><br><img src="https://picgo.ultramarine.cc/img/m92.1.jpg"><br><img src="https://picgo.ultramarine.cc/img/m92.webp"><br><img src="https://picgo.ultramarine.cc/img/m93.webp"><br><img src="https://picgo.ultramarine.cc/img/m94.jpg"></p>
 ]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
       <tags>
-        <tag>C语言</tag>
+        <tag>图库</tag>
       </tags>
   </entry>
   <entry>
