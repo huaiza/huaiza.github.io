@@ -1110,7 +1110,7 @@ pre code {
   }
 }
 .book-mark-link::before {
-  color: #694a54;
+  color: #619ac3;
   font-size: 32px;
   line-height: 1;
   content: '\f02e';
