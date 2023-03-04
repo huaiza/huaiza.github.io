@@ -6,7 +6,7 @@
   <link href="http://ciallo.tech/atom.xml" rel="self"/>
   
   <link href="http://ciallo.tech/"/>
-  <updated>2023-02-05T07:53:40.430Z</updated>
+  <updated>2023-03-04T14:58:55.069Z</updated>
   <id>http://ciallo.tech/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2023.3.4</title>
+    <link href="http://ciallo.tech/2023/03/04/2023-3-4/"/>
+    <id>http://ciallo.tech/2023/03/04/2023-3-4/</id>
+    <published>2023-03-04T14:38:53.000Z</published>
+    <updated>2023-03-04T14:58:55.069Z</updated>
+    
+    <content type="html"><![CDATA[<p>3月4日：自习。学习的进展有些滞后，但可喜的是终于行动了起来。外面的空气远比宿舍要清新，早春的晚上依旧感到寒冷。明天还有电路高数概率论离散数学大物等着我。<br>夜宵，从罗森买的饭团，和清爽微凉的夜空。</p><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://music.ciallo.tech/img/2023341.webp"    height=500 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">1</div></center><center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://music.ciallo.tech/img/2023342.webp" height=200 alt=""/>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://music.ciallo.tech/img/2023343.webp" height=200 alt=""/>    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">      23      </div></center>]]></content>
+    
+    
+    <summary type="html">3月4日：自习。学习的进展有些滞后，但可喜的是终于行动了起来。外面的空气远比宿舍要清新，早春的晚上依旧感到寒冷。明天还有电路高数概率论离散数学大物等着我。  夜宵，从罗森买的饭团，和清爽微凉的夜空。</summary>
+    
+    
+    
+    <category term="生活" scheme="http://ciallo.tech/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="卡夫卡" scheme="http://ciallo.tech/tags/%E5%8D%A1%E5%A4%AB%E5%8D%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>C语言基础：结构体</title>
