@@ -6,7 +6,7 @@
   <link href="http://ciallo.tech/atom.xml" rel="self"/>
   
   <link href="http://ciallo.tech/"/>
-  <updated>2023-03-04T14:58:55.069Z</updated>
+  <updated>2023-03-05T13:58:02.403Z</updated>
   <id>http://ciallo.tech/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2023.3.5</title>
+    <link href="http://ciallo.tech/2023/03/05/2023-3-5/"/>
+    <id>http://ciallo.tech/2023/03/05/2023-3-5/</id>
+    <published>2023-03-05T13:39:45.000Z</published>
+    <updated>2023-03-05T13:58:02.403Z</updated>
+    
+    <content type="html"><![CDATA[<p>3月5日,也是自习。饭后的时光一如往常一样会犯困，所以今天打了两个小盹。第八章的高数作业已经做完，今天也可以早睡了。高数和电路略有收获，但也没有学到多少新的知识。在写作业时，我才发现我对概率论的了解是一团浆糊。Git bash依然在报错，但傲娇的它依然帮我完成了部署。晚风依旧清冽，只是上完晚自习的大脑有些沉重。今晚得早睡，还得迎接下一周的学习。  </p><p>夜宵，一箱柑橘中的三个，和明天的早餐——一个烧卖。</p>]]></content>
+    
+    
+    <summary type="html">3月5日,也是自习。饭后的时光一如往常一样会犯困，所以今天打了两个小盹。第八章的高数作业已经做完，今天也可以早睡了。高数和电路略有收获，但也没有学到多少新的知识。在写作业时，我才发现我对概率论的了解是一团浆糊。晚风依旧清冽，只是上完晚自习的大脑有些沉重。今晚得早睡，还得迎接下一周的学习。  夜宵，一箱柑橘中的三个，和明天的早餐——一个烧卖。</summary>
+    
+    
+    
+    <category term="生活" scheme="http://ciallo.tech/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="卡夫卡" scheme="http://ciallo.tech/tags/%E5%8D%A1%E5%A4%AB%E5%8D%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>2023.3.4</title>
