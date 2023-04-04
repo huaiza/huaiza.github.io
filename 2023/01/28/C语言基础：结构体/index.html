@@ -20,12 +20,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"ciallo.tech","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#619ac3","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":false,"nav":null,"activeClass":"livere"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="结构体目录：1. 结构体的概念2. 结构体类型的定义1. 结构体类型的嵌套定义3. 结构体类型变量1. 结构体类型变量的定义一">
+    <meta name="description" content="结构体目录：  结构体的概念 结构体类型的定义 结构体类型的嵌套定义 结构体类型变量 结构体类型变量的定义 结构体类型变量的初始化 结构体类型变量的引用 注意事项1 注意事项2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言基础：结构体">
 <meta property="og:url" content="http://ciallo.tech/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/index.html">
 <meta property="og:site_name" content="Ciallo">
-<meta property="og:description" content="结构体目录：1. 结构体的概念2. 结构体类型的定义1. 结构体类型的嵌套定义3. 结构体类型变量1. 结构体类型变量的定义一">
+<meta property="og:description" content="结构体目录：  结构体的概念 结构体类型的定义 结构体类型的嵌套定义 结构体类型变量 结构体类型变量的定义 结构体类型变量的初始化 结构体类型变量的引用 注意事项1 注意事项2">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://picgo.ultramarine.cc/img/20230128112317.png">
 <meta property="og:image" content="https://picgo.ultramarine.cc/img/20230128143838.png">
@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://picgo.ultramarine.cc/img/20230128155854.png">
 <meta property="og:image" content="https://picgo.ultramarine.cc/img/20230128161957.png">
 <meta property="article:published_time" content="2023-01-28T14:43:20.000Z">
-<meta property="article:modified_time" content="2023-02-05T07:53:40.430Z">
+<meta property="article:modified_time" content="2023-04-04T07:20:48.798Z">
 <meta property="article:author" content="huaizai">
 <meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
@@ -237,7 +237,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="C语言基础：结构体 | Ciallo">
-      <meta itemprop="description" content="结构体目录：1. 结构体的概念2. 结构体类型的定义1. 结构体类型的嵌套定义3. 结构体类型变量1. 结构体类型变量的定义一">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -259,7 +259,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-02-05 15:53:40" itemprop="dateModified" datetime="2023-02-05T15:53:40+08:00">2023-02-05</time>
+      <time title="修改时间：2023-04-04 15:20:48" itemprop="dateModified" datetime="2023-04-04T15:20:48+08:00">2023-04-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -296,7 +296,6 @@
     </span>
 </div>
 
-            <div class="post-description">结构体目录：1. 结构体的概念2. 结构体类型的定义1. 结构体类型的嵌套定义3. 结构体类型变量1. 结构体类型变量的定义一</div>
         </div>
       </header>
 
@@ -314,7 +313,7 @@
 <li>结构体类型变量的初始化</li>
 <li>结构体类型变量的引用</li>
 <li>注意事项1</li>
-<li>注意事项2</li>
+<li>注意事项2<span id="more"></span></li>
 <li>注意事项3</li>
 <li>注意事项4</li>
 <li>相关说明</li>
@@ -886,7 +885,7 @@
   </script><script async src="/js/runtime.js"></script><script data-pjax>
   function butterfly_swiper_injector_config(){
     var parent_div_git = document.getElementById('recent-posts');
-    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/01/28/C语言基础：结构体/" alt=""><img width="48" height="48" src="https://picgo.ultramarine.cc/img/c1cover.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-28</span><a class="blog-slider__title" href="2023/01/28/C语言基础：结构体/" alt="">C语言基础：结构体</a><div class="blog-slider__text">结构体目录：1. 结构体的概念2. 结构体类型的定义1. 结构体类型的嵌套定义3. 结构体类型变量1. 结构体类型变量的定义一</div><a class="blog-slider__button" href="2023/01/28/C语言基础：结构体/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/01/26/角堇-三色堇种植/" alt=""><img width="48" height="48" src="https://picgo.ultramarine.cc/img/garden21.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-26</span><a class="blog-slider__title" href="2023/01/26/角堇-三色堇种植/" alt="">角堇&amp;三色堇种植</a><div class="blog-slider__text">何为角堇？角堇属于堇菜科、堇菜属多年生草本植物，自然花期11-5月，花期较长。它的植株较为低矮，花多且轻盈。一般播种温度在18摄氏度左右。于长江中下游地区而言，秋末冬初时节便是最好的播种时间。它虽然不是本土植物，但依旧很常见。它是常用的道路绿化花卉，在路边的花坛里经常能见到。角堇有很好的耐寒性，其生长期贯穿整个冬春季节，恣意灿烂的小花能够装点萧条的冬季与早春。</div><a class="blog-slider__button" href="2023/01/26/角堇-三色堇种植/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/12/21/建站小记/" alt=""><img width="48" height="48" src="https://picgo.ultramarine.cc/img/D14320379182C34F1421621570CC0D05.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-12-21</span><a class="blog-slider__title" href="2022/12/21/建站小记/" alt="">建站小记</a><div class="blog-slider__text">本站是博主的个人博客，基于Hexo搭建，采用Butterfly主题，网站的文件托管在Github仓库和Vercel上。在搭建过程中主要参考了[Fomalhaut🥝](https://www.fomal.cc) 的文章及发布在B站的同步视频。</div><a class="blog-slider__button" href="2022/12/21/建站小记/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/01/28/C语言基础：结构体/" alt=""><img width="48" height="48" src="https://picgo.ultramarine.cc/img/c1cover.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-28</span><a class="blog-slider__title" href="2023/01/28/C语言基础：结构体/" alt="">C语言基础：结构体</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2023/01/28/C语言基础：结构体/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/01/26/角堇-三色堇种植/" alt=""><img width="48" height="48" src="https://picgo.ultramarine.cc/img/garden21.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-26</span><a class="blog-slider__title" href="2023/01/26/角堇-三色堇种植/" alt="">角堇&amp;三色堇种植</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2023/01/26/角堇-三色堇种植/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/12/21/建站小记/" alt=""><img width="48" height="48" src="https://picgo.ultramarine.cc/img/D14320379182C34F1421621570CC0D05.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-12-21</span><a class="blog-slider__title" href="2022/12/21/建站小记/" alt="">建站小记</a><div class="blog-slider__text">本站是博主的个人博客，基于Hexo搭建，采用Butterfly主题，网站的文件托管在Github仓库和Vercel上。在搭建过程中主要参考了[Fomalhaut🥝](https://www.fomal.cc) 的文章及发布在B站的同步视频。</div><a class="blog-slider__button" href="2022/12/21/建站小记/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
     console.log('已挂载butterfly_swiper')
     parent_div_git.insertAdjacentHTML("afterbegin",item_html)
     }
