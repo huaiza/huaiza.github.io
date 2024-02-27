@@ -1,938 +1,386 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#66a9c9"><meta name="generator" content="Hexo 5.4.2">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-57x57.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/16x16.png">
-  <link rel="mask-icon" href="/images/android-icon-48x48.png" color="#66a9c9">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"ultramarine.cc","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#619ac3","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":false,"nav":null,"activeClass":"livere"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-
-    <meta name="description" content="云端小家">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Ultramarine-Blog</title><meta name="author" content="huwahuwahuwa"><meta name="copyright" content="huwahuwahuwa"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="云端小家">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ultramarine-Blog">
 <meta property="og:url" content="http://ultramarine.cc/index.html">
 <meta property="og:site_name" content="Ultramarine-Blog">
 <meta property="og:description" content="云端小家">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://picgo.ultramarine.cc/img/526C7C63BD566A641787DCB3189B18CA.jpg">
 <meta property="article:author" content="huwahuwahuwa">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picgo.ultramarine.cc/img/526C7C63BD566A641787DCB3189B18CA.jpg"><link rel="shortcut icon" href="https://picgo.ultramarine.cc/img/t3.jpg"><link rel="canonical" href="http://ultramarine.cc/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":700},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Ultramarine-Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-02-27 21:07:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<link rel="canonical" href="http://ultramarine.cc/">
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Ultramarine-Blog</title>
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-
-
-
-
-
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-<!-- hexo injector head_end start --><link rel="stylesheet" href="https://www.fomal.cc/static/css/runtime.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="Ultramarine-Blog" type="application/atom+xml">
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="headband"></div>
-
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">Ultramarine-Blog</h1>
-      <i class="logo-line"></i>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="搜索" role="button">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-主页"><a href="/" rel="section"><i class="fas fa-home fa-fw"></i>主页</a></li><li class="menu-item menu-item-归档"><a href="/archives/" rel="section"><i class="fas fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-友链"><a href="/link/" rel="section"><i class="fas fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-标签"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-分类"><a href="/categories/" rel="section"><i class="fas fa-folder-open fa-fw"></i>分类</a></li><li class="menu-item menu-item-关于"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-音乐"><a href="/music/" rel="section"><i class="fas fa-music fa-fw"></i>音乐</a></li><li class="menu-item menu-item-watercolor"><a href="/watercolor/" rel="section"><i class="fa-solid fa-paintbrush fa-fw"></i>Watercolor</a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close" role="button">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</header>
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
         
-  
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-overview-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="huwahuwahuwa"
-      src="https://music.ciallo.tech/img/avatar.webp">
-  <p class="site-author-name" itemprop="name">huwahuwahuwa</p>
-  <div class="site-description" itemprop="description">云端小家</div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">13</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-          <a href="/tags/">
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author animated">
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/huaiza" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huaiza" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/ultramarinecc@126.com" title="E-Mail → ultramarinecc@126.com" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-        </div>
-      </div>
-    </div>
-
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </aside>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/universe.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><link rel="stylesheet" href="https://www.fomal.cc/static/css/runtime.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Ultramarine-Blog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/526C7C63BD566A641787DCB3189B18CA.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/new/"><i class="fa-fw fa-solid fa-angles-up"></i><span> 更新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/log/"><i class="fa-fw fa-solid fa-mug-saucer"></i><span> 日志</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa-solid fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa-solid fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://picgo.ultramarine.cc/img/spring%20festival.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Ultramarine-Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/new/"><i class="fa-fw fa-solid fa-angles-up"></i><span> 更新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/log/"><i class="fa-fw fa-solid fa-mug-saucer"></i><span> 日志</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa-solid fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa-solid fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Ultramarine-Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/huaiza" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2656103703@qq.com" target="_blank" title="优香"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://picgo.ultramarine.cc/img/qqcontact.png" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a><a class="social-icon" href="https://ultramarine.cc/atom.xml" target="_blank" title="RSS订阅"><i class="fas fa-rss"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2023/11/04/Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Matlab学习笔记"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/073153096D231221355333E8B27865FD.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Matlab学习笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/11/04/Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Matlab学习笔记">Matlab学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-04T08:15:17.000Z" title="发表于 2023-11-04 16:15:17">2023-11-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-04T08:15:17.802Z" title="更新于 2023-11-04 16:15:17">2023-11-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2023/11/04/Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/29/%E3%80%8A%E6%B6%88%E8%B4%B9%E7%A4%BE%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%A2%9E%E9%95%BF%E7%9A%84%E6%81%B6%E6%80%A7%E5%BE%AA%E7%8E%AF/" title="《消费社会》读书笔记-增长的恶性循环"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/073153096D231221355333E8B27865FD.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《消费社会》读书笔记-增长的恶性循环"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/29/%E3%80%8A%E6%B6%88%E8%B4%B9%E7%A4%BE%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%A2%9E%E9%95%BF%E7%9A%84%E6%81%B6%E6%80%A7%E5%BE%AA%E7%8E%AF/" title="《消费社会》读书笔记-增长的恶性循环">《消费社会》读书笔记-增长的恶性循环</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-29T06:11:33.000Z" title="发表于 2023-08-29 14:11:33">2023-08-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-29T06:13:15.029Z" title="更新于 2023-08-29 14:13:15">2023-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2023/08/29/%E3%80%8A%E6%B6%88%E8%B4%B9%E7%A4%BE%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%A2%9E%E9%95%BF%E7%9A%84%E6%81%B6%E6%80%A7%E5%BE%AA%E7%8E%AF/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+本文是内容主要围绕鲍德里亚《消费社会》第一章的“增长的恶性循环”一节。
+
+经济方面的再分配对于缩小不平等存在不可避免的无力性。
+在当时的法国，尽管20%以上的国内生产总值会被重新分配，以用于“国家社会预算”，但这种再分配并没有打破阶层社会的继承性。在教育、社会保险、税、集体设施的使用权，甚至死亡领域的不平等依旧没有打破。文中，鲍德里亚是引用了大量数字、文献来推理证明此观点。
+以国民教育为例，不同阶层的教育的结构性不平等并没有因为再分配的支出而减小，这是因为还有除经济外的其他更加微妙的不平等在起着更大的作用。经济的再分配非但没有消除不平等现象，反而加强了这种不平等。
+重新分配——这本应用于消除社会不平等的工具，并没有保证社会的客观均等，反而如此成功地恢复了社会的不平等。鲍德里亚认为：“在极不平等的社会里，为确保形式上平等而采取的行动（主要是增加消除不平等的经济支出），大多数情况下加重了不平等。“在解决（或充分缓解）分配原则造成的不平等问题之前，单纯的经济上的绝对值增长（对于改善社会生活）是没有意义的。”
+这也就印证了他在本小节末提出的观点：” 如果说转移的总体作用能使最终收入的幅度减半 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/04/04/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D-2/" title="角堇-三色堇种植-2"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/073153096D231221355333E8B27865FD.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="角堇-三色堇种植-2"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D-2/" title="角堇-三色堇种植-2">角堇-三色堇种植-2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-04T06:30:17.000Z" title="发表于 2023-04-04 14:30:17">2023-04-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-04T07:18:15.089Z" title="更新于 2023-04-04 15:18:15">2023-04-04</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%9B%AD%E8%89%BA/">园艺</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2023/04/04/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D-2/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+上一篇详见：角堇-三色堇种植
 
 
-    </div>
-
-    <div class="main-inner index posts-expand">
-
-    
+去年秋天种下的第一批角堇，终究没能见到来年的春光。
+看着空荡的花盆，博主觉得还是有必要种些什么的。角堇作为耐寒植物，更适合在较冷的时间发芽和种植。现在的时间理应是角堇的花期，而不是生长期。更何况，角堇为一年生草本植物，生命周期较短，现在早已错过了角堇的播种期。同时，博主也不想再费精力折腾麻烦的幼苗了。于是，我一拍脑门，买回来了现成的角堇花苗。
+博主从某橘色平台上分别采购了三个品种的角堇——果汁冰糕代尔夫陶瓷蓝，皱边角堇彩蝶，芳香冰川。刚好正值花期，花苗在邮寄过来前已经开花了。
 
 
-<div class="post-block">
-  
-  
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ultramarine.cc/2023/11/04/Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://music.ciallo.tech/img/avatar.webp">
-      <meta itemprop="name" content="huwahuwahuwa">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ultramarine-Blog">
-      <meta itemprop="description" content="云端小家">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Ultramarine-Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/04/Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Matlab学习笔记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-11-04 16:15:17" itemprop="dateCreated datePublished" datetime="2023-11-04T16:15:17+08:00">2023-11-04</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
+代尔夫陶瓷蓝的花瓣边有蓝至紫色的条带，中心有深紫色的脸谱状斑纹和黄色斑点；芳香冰川的花瓣为白色，同时配上紫色与黄色的斑纹；彩蝶的花更大，颜色为紫色与黄色。三种品种的花中均同时出现了紫色与黄色。在色环中，紫色与黄色相互对称，互为互补色。如果在调和颜料时，将两者中的一种加入到另一个的颜料中，会降低原来颜色的饱和度，多次添加会得到灰黑色。在配色时，如果单纯使用两种互补色作为主要颜色，由于其色相缺乏共性，会造成极强的视觉反差，搭在一起容易有格格不入、扎眼的感觉，整体会显得刺眼（如 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/04/03/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%B0%B4%E5%BD%A9%E9%A2%9C%E6%96%99%E2%80%94%E2%80%94%E8%8D%B7%E5%B0%94%E6%8B%9C%E8%8B%B1/" title="年轻人的第一款艺术家水彩颜料——荷尔拜英"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/073153096D231221355333E8B27865FD.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="年轻人的第一款艺术家水彩颜料——荷尔拜英"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/03/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%B0%B4%E5%BD%A9%E9%A2%9C%E6%96%99%E2%80%94%E2%80%94%E8%8D%B7%E5%B0%94%E6%8B%9C%E8%8B%B1/" title="年轻人的第一款艺术家水彩颜料——荷尔拜英">年轻人的第一款艺术家水彩颜料——荷尔拜英</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-03T13:38:22.000Z" title="发表于 2023-04-03 21:38:22">2023-04-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-04T07:41:15.715Z" title="更新于 2023-04-04 15:41:15">2023-04-04</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%B5%8B%E8%AF%84/">测评</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2023/04/03/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%B0%B4%E5%BD%A9%E9%A2%9C%E6%96%99%E2%80%94%E2%80%94%E8%8D%B7%E5%B0%94%E6%8B%9C%E8%8B%B1/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+本博客有水彩板块 指路—&gt; watercolor
+正文在博主闲暇时闲逛闲鱼时，发现了一款荷尔拜英24色水彩颜料残管，卖家在商品介绍中说还剩1/3的颜料。
+在经历了一些心理博弈后，我最终拍下了它。
 
     
     
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+    荷尔拜英颜料
 
 
+在此之前，我所用的颜料为温莎牛顿歌文二十色5ml管装水彩。这套颜料很不错，唯一的缺陷是绿色系的三个颜色并不太能直接使用，总需要调和后才能得到理想的色彩。
 
 
     
+    
+    温莎牛顿的歌文颜料
 
 
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ultramarine.cc/2023/08/29/%E3%80%8A%E6%B6%88%E8%B4%B9%E7%A4%BE%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%A2%9E%E9%95%BF%E7%9A%84%E6%81%B6%E6%80%A7%E5%BE%AA%E7%8E%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://music.ciallo.tech/img/avatar.webp">
-      <meta itemprop="name" content="huwahuwahuwa">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ultramarine-Blog">
-      <meta itemprop="description" content="云端小家">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Ultramarine-Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/08/29/%E3%80%8A%E6%B6%88%E8%B4%B9%E7%A4%BE%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%A2%9E%E9%95%BF%E7%9A%84%E6%81%B6%E6%80%A7%E5%BE%AA%E7%8E%AF/" class="post-title-link" itemprop="url">《消费社会》读书笔记-增长的恶性循环</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-08-29 14:11:33 / 修改时间：14:13:15" itemprop="dateCreated datePublished" datetime="2023-08-29T14:11:33+08:00">2023-08-29</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
+荷尔拜英的水彩色料确实很细腻，沉淀较少。其颜色也比歌文的颜色更加明亮。绿色系的配色更符合老夫的心意，无论是直接使用还是调色后再使用都很合适。相较于歌文，它的中国白颜料（一般色料为锌白）也更加接近纯白。铅白：真要白害得看我荷尔拜英的颜料更容易溶解，在纸上作画时，修改就变得更方便。
+其实整体感觉相差并没有多大，颜料的优劣也不会影响作品的质量。
 
     
     
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>本文是内容主要围绕鲍德里亚《消费社会》第一章的“增长的恶性循环”一节。</p>
-</blockquote>
-<p>经济方面的再分配对于缩小不平等存在不可避免的无力性。</p>
-<p>在当时的法国，尽管20%以上的国内生产总值会被重新分配，以用于“国家社会预算”，但这种再分配并没有打破阶层社会的继承性。在教育、社会保险、税、集体设施的使用权，甚至死亡领域的不平等依旧没有打破。文中，鲍德里亚是引用了大量数字、文献来推理证明此观点。</p>
-<p>以国民教育为例，不同阶层的教育的结构性不平等并没有因为再分配的支出而减小，这是因为还有除经济外的其他更加微妙的不平等在起着更大的作用。经济的再分配非但没有消除不平等现象，反而加强了这种不平等。</p>
-<p>重新分配——这本应用于消除社会不平等的工具，并没有保证社会的客观均等，反而如此成功地恢复了社会的不平等。鲍德里亚认为：“在极不平等的社会里，为确保形式上平等而采取的行动（主要是增加消除不平等的经济支出），大多数情况下加重了不平等。“在解决（或充分缓解）分配原则造成的不平等问题之前，单纯的经济上的绝对值增长（对于改善社会生活）是没有意义的。”</p>
-<p>这也就印证了他在本小节末提出的观点：” 如果说转移的总体作用能使最终收入的幅度减半，那么在相当长的时间内，这种最终收入分配相对稳定性的获得，是以大大增加再分配的总额为代价的。“</p>
-<hr>
-<p>“丰盛”的危害，是由工业发展与消费结构共同导致的。噪音、空气和水污染、风景破坏、汽车拥挤等破坏是由工业发展造成的。在消费结构方面，为这些破坏所付出的额外代价——如购买包装饮用水来缓解因水污染造成的水荒、因汽车造成的汽油开支和交通事故医疗费、社会发展导致的不安全感使得烟草酒精等补偿性消费增加，这些为清除危害的权宜之计成为了”丰盛“带来的生产消费增长的一环。</p>
-<p>这些危害的增长导致的一切后果，就算是为了对抗危害而产生的补偿性支出，都会成为财务统计中”用于提高生活水平“的”增加。鲍德里亚提出了一个循环的社会模型：随着经济的增长，带来了破坏导致了补偿性支出的增长，产生了数字与总结的恶性增长。</p>
-<p>鲍德里亚对这一现象的解读为“个人的或集体的‘功能障碍性的’消费比‘功能性‘的消费快得多，体系实际上自己干扰着自己“。</p>
-<p>在财务统计中，常常存在一种理性的标准，它只衡量看得见摸得着的要素，而忽略无法衡量的成分（文中列举了妇女的家务、研究、文化）。并且它将一切可以被数字衡量的东西都视作积极的，无论它们实际有益还是有害，都成为了“生产的增长“而存在。</p>
-<p>文中列举了一个例子：” 在会计们的眼中，巴黎五十年之中空气的亮度下降30％是剩余的、不存在的。如果说一笔更大的电力、灯泡、眼镜等开支由此得以产生，那么，它一下子就会作为生产的增加与社会财富而存在。“生产力因此被神化。而数字之下真正的真相，如对危害的弥补，内部运作所花费的代价，社会不良功能的自我调节费用，则被掩盖了。因此，鲍德里亚认为，” 从理性体制的角度看，确切地说，现实体制的昌盛靠的是其掩盖着的瑕疵、平衡、危害以及罪恶。“</p>
-<hr>
-<p>在“浪费“这一节中，鲍德里亚将浪费视作“物质丰盛”的符号。在物品的内在的道德规则中，一个物品应该是持续发挥其理性用途，直至其无法发挥这个用途后被废弃。</p>
-<p>然而，人类长久以来似乎不喜欢遵循这样的规则，鲍德里亚对此描述道：“从随地位和时尚乱扔财富、更换财富的个人，一直到国家范围的浪费，甚至到全球性的浪费，人类在一般经济和自然资源开发的过程中是做得出来的。浪费是一种疯狂、一种精神错乱、一种刻在人类本能中的官能障碍，它使得人们主动焚毁储备的物资，用非理性之举把自身的生存条件置于危险中。” 印第安人在宗教节日通过破坏财物来巩固社会关系、君主贵族阶级通过无益的浪费来证明他们的优越感。在这种浪费中，物品的象征价值取代了原本的实用价值，居然成为了物品的核心功能。鲍德里亚因此提出了“消费“区别于需求与节约的另一个概念——“消耗“，它将“多余”先于“必需”，“价值”的开销优于物质的“累积”。</p>
-<p>如今的浪费不再是因为印第安人宗教节日的象征，而是形成了一种系统的形式。现代社会的浪费因大众传媒而被广泛推崇。在本书成书的年代（1970s）,大众传媒的焦点不再是自我奋斗者”、创始人、先驱者、探险家和垦荒者，而是花天酒地、纸醉金迷的“大浪费者。</p>
-<p>“今天，生产的东西，并不是根据其使用价值或其可能的使用时间而存在，而是恰恰相反——根据其死亡而存在，死亡的加速势必引起价格上涨速度的加快。“巨资的广告营销通过去除商品的使用价值和时间价值来使它屈从于时尚价值——这种想法完全区别于传统的消费常识。</p>
-<p>“时尚“”潮流“‘换代”成为了新的追求。广告营销的景观使得人们的消费意愿屈从于商品时尚的指令，使得旧产品被冷落，新产品被推崇。这种浪费式的消费与生产共同保证了生产范畴的再生产。</p>
-<p>“在消费社会中，库存是焦虑的标志，商品只有在破坏中才显得过多，财富只有在消失中才得到证明。无论以何种形式，破坏都注定要成为后工业社会决定性的功能之一。”</p>
+    上两行是荷尔拜英，下两行是歌文
 
-      
-    </div>
+
+令我不解的是，这款24色荷尔拜英套装中，没有玫红色与纯红色。玫红色作为减法三原色之一，与柠檬黄和群青配合能够调出较广的颜色。至于怎 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/04/03/3M%E7%9A%84X5A%E8%80%B3%E7%BD%A9%E5%88%9D%E6%B5%8B%E8%AF%84/" title="3M的X5A耳罩初测评"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/073153096D231221355333E8B27865FD.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="3M的X5A耳罩初测评"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/03/3M%E7%9A%84X5A%E8%80%B3%E7%BD%A9%E5%88%9D%E6%B5%8B%E8%AF%84/" title="3M的X5A耳罩初测评">3M的X5A耳罩初测评</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-03T12:44:48.000Z" title="发表于 2023-04-03 20:44:48">2023-04-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-04T07:41:33.811Z" title="更新于 2023-04-04 15:41:33">2023-04-04</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%B5%8B%E8%AF%84/">测评</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2023/04/03/3M%E7%9A%84X5A%E8%80%B3%E7%BD%A9%E5%88%9D%E6%B5%8B%E8%AF%84/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">在经受了一个多学期的舍友的Apex联机噪音的袭扰后，我觉得还是有必要采取一些措施来保护一下耳膜。
+经淘宝、论坛等多方调研，最终我斥巨资购买了所有推荐选项中的最高配——3M X5A耳罩。
 
     
     
-    
+    安耳悠soft耳塞与3M X5A耳罩
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
+根据官方的产品参数，在其同系列中，X5A的降噪效果为SRR31dB,而其他两款均为SRR27dB。
 
 
     
+    
+    这个伸缩杆确实感觉很廉价
 
+谈谈它的外观作工。外壳均为塑料，两个耳罩上端均有伸缩调节杆。相较于相同外观的耳机，伸缩杆的外形确实较为廉价，耳罩的隔音材料只是一圈细密且厚的海绵。总让我感觉这个耳罩不值230元的高价。耳罩的大小也非常夸张，单个耳罩的宽度能达到7厘米，但同时，耳罩内的空间也很大。虽说其质量达到了300多克，但佩戴时并没有明显的负重感，对颈椎的负担还算小。
 
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ultramarine.cc/2023/04/04/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://music.ciallo.tech/img/avatar.webp">
-      <meta itemprop="name" content="huwahuwahuwa">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ultramarine-Blog">
-      <meta itemprop="description" content="云端小家">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Ultramarine-Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/04/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D-2/" class="post-title-link" itemprop="url">角堇-三色堇种植-2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-04-04 14:30:17 / 修改时间：15:18:15" itemprop="dateCreated datePublished" datetime="2023-04-04T14:30:17+08:00">2023-04-04</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>646</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
 
     
     
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>上一篇详见：<a target="_blank" rel="noopener" href="https://ciallo.tech/2023/01/26/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D/">角堇-三色堇种植</a></p>
-</blockquote>
-<hr>
-<p>去年秋天种下的第一批角堇，终究没能见到来年的春光。</p>
-<p>看着空荡的花盆，博主觉得还是有必要种些什么的。角堇作为耐寒植物，更适合在较冷的时间发芽和种植。现在的时间理应是角堇的花期，而不是生长期。更何况，角堇为一年生草本植物，生命周期较短，现在早已错过了角堇的播种期。同时，博主也不想再费精力折腾麻烦的幼苗了。于是，我一拍脑门，买回来了现成的角堇花苗。</p>
-<p>博主从某橘色平台上分别采购了三个品种的角堇——果汁冰糕代尔夫陶瓷蓝，皱边角堇彩蝶，芳香冰川。刚好正值花期，花苗在邮寄过来前已经开花了。</p>
-<p><img src="https://music.ciallo.tech/img/jiaojin114.webp"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/04/04/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D-2/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+    耳罩内空间
 
 
+在佩戴感受方面，耳罩的气密性很好，以至于在穿戴耳罩时，耳膜均能清晰地感受到耳道内气压地变化。日常宿舍内谈话等声音确实能被很好的隔绝，佩戴耳罩后基本无法分辨所说话的内容。但是，就算同时佩戴耳塞和耳罩 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/" title="C语言基础：结构体"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/c1cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C语言基础：结构体"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/" title="C语言基础：结构体">C语言基础：结构体</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-28T14:43:20.000Z" title="发表于 2023-01-28 22:43:20">2023-01-28</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-04T07:20:48.798Z" title="更新于 2023-04-04 15:20:48">2023-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">结构体目录：
 
+结构体的概念
+结构体类型的定义
+结构体类型的嵌套定义
+结构体类型变量
+结构体类型变量的定义
+结构体类型变量的初始化
+结构体类型变量的引用
+注意事项1
+注意事项2
+注意事项3
+注意事项4
+相关说明
+结构体数组
+结构体数组的定义
+结构体数组的初始化
+分行初始化
+顺序初始化
+结构体数组的访问
+结构体数组应用举例
+结构体与指针
+指向结构体类型数据的指针
+指向结构体变量的指针
+指向结构体数组的指针
+结构体变量和指向结构体的指针做函数参数
+结构体变量做参数（值传递）
+结构体数组做函数参数
+函数返回值是结构体类型1.结构体的概念
 
-    
+结构体是一种构造数据类型
 
+数组也是一种构造数据类型（由多个数组合在一起），结构体可以组合不同类型的数
 
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ultramarine.cc/2023/04/03/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%B0%B4%E5%BD%A9%E9%A2%9C%E6%96%99%E2%80%94%E2%80%94%E8%8D%B7%E5%B0%94%E6%8B%9C%E8%8B%B1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://music.ciallo.tech/img/avatar.webp">
-      <meta itemprop="name" content="huwahuwahuwa">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ultramarine-Blog">
-      <meta itemprop="description" content="云端小家">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Ultramarine-Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/03/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%B0%B4%E5%BD%A9%E9%A2%9C%E6%96%99%E2%80%94%E2%80%94%E8%8D%B7%E5%B0%94%E6%8B%9C%E8%8B%B1/" class="post-title-link" itemprop="url">年轻人的第一款艺术家水彩颜料——荷尔拜英</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-04-03 21:38:22" itemprop="dateCreated datePublished" datetime="2023-04-03T21:38:22+08:00">2023-04-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-04 15:41:15" itemprop="dateModified" datetime="2023-04-04T15:41:15+08:00">2023-04-04</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>456</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>荷尔拜英水彩颜料的开箱</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/04/03/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%B0%B4%E5%BD%A9%E9%A2%9C%E6%96%99%E2%80%94%E2%80%94%E8%8D%B7%E5%B0%94%E6%8B%9C%E8%8B%B1/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
+用途：把不同类型的数据组合成一个整体————自定义数据类型。
+2.结构体类型的定义
+结构体先定义类型，再定义变量
 
 
     
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ultramarine.cc/2023/04/03/3M%E7%9A%84X5A%E8%80%B3%E7%BD%A9%E5%88%9D%E6%B5%8B%E8%AF%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://music.ciallo.tech/img/avatar.webp">
-      <meta itemprop="name" content="huwahuwahuwa">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ultramarine-Blog">
-      <meta itemprop="description" content="云端小家">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Ultramarine-Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/03/3M%E7%9A%84X5A%E8%80%B3%E7%BD%A9%E5%88%9D%E6%B5%8B%E8%AF%84/" class="post-title-link" itemprop="url">3M的X5A耳罩初测评</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-04-03 20:44:48" itemprop="dateCreated datePublished" datetime="2023-04-03T20:44:48+08:00">2023-04-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-04 15:41:33" itemprop="dateModified" datetime="2023-04-04T15:41:33+08:00">2023-04-04</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>526</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>3M X5A耳罩的使用体验</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/04/03/3M%E7%9A%84X5A%E8%80%B3%E7%BD%A9%E5%88%9D%E6%B5%8B%E8%AF%84/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+    语法格式与实例
 
 
 
 
-    
+关键字struct代表定义的是结构体类型。
+注意最后的分号。
+在之后定义变量时要使用类型名，注意类型名，在实例中，类型名不是”student”而是”struct student”!!! ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/526C7C63BD566A641787DCB3189B18CA.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">huwahuwahuwa</div><div class="author-info__description">云端小家</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/huaiza"><i class="fab fa-github"></i><span>前往小家 ᕕ( ﾟ∀。)ᕗ</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/huaiza" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2656103703@qq.com" target="_blank" title="优香"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://picgo.ultramarine.cc/img/qqcontact.png" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a><a class="social-icon" href="https://ultramarine.cc/atom.xml" target="_blank" title="RSS订阅"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客，这里目前还什么也没有，后续将会不断完善的。————小贴士：点击右下角的图标可以设置黑暗与明亮模式。</div><div id="welcome-info"></div></div><div class="sticky_layout"><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">13</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2022-12-18T12:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">10.5k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-02-27T13:07:44.833Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By huwahuwahuwa</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe/?keyword=20230052" target="_blank">萌ICP备20230052号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
 
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
 
-<div class="post-block">
-  
-  
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => { 
+  const getCommentUrl = () => {
+    const eleGroup = document.querySelectorAll('#recent-posts .article-title')
+    let urlArray = []
+    eleGroup.forEach(i=>{
+      urlArray.push(i.getAttribute('href'))
+    })
+    return urlArray
+  }
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ultramarine.cc/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/">
+  const getCount = () => {
+    const runTwikoo = () => {
+      twikoo.getCommentsCount({
+        envId: 'https://twikoo.ultramarine.cc',
+        region: '',
+        urls: getCommentUrl(),
+        includeReply: false
+      }).then(function (res) {
+        document.querySelectorAll('#recent-posts .twikoo-count').forEach((item,index) => {
+          item.innerText = res[index].count
+        })
+      }).catch(function (err) {
+        console.log(err)
+      })
+    }
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://music.ciallo.tech/img/avatar.webp">
-      <meta itemprop="name" content="huwahuwahuwa">
-    </span>
+      if (typeof twikoo === 'object') {
+        runTwikoo()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+      }
+  }
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ultramarine-Blog">
-      <meta itemprop="description" content="云端小家">
-    </span>
+  window.pjax ? getCount() : window.addEventListener('load', getCount)
 
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Ultramarine-Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/" class="post-title-link" itemprop="url">C语言基础：结构体</a>
-        </h2>
+})()</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.hitokoto
+      }
+    })
+}
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-01-28 22:43:20" itemprop="dateCreated datePublished" datetime="2023-01-28T22:43:20+08:00">2023-01-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-04 15:20:48" itemprop="dateModified" datetime="2023-04-04T15:20:48+08:00">2023-04-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">C语言</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>7.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>7 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1><p>目录：</p>
-<ol>
-<li>结构体的概念</li>
-<li>结构体类型的定义</li>
-<li>结构体类型的嵌套定义</li>
-<li>结构体类型变量</li>
-<li>结构体类型变量的定义</li>
-<li>结构体类型变量的初始化</li>
-<li>结构体类型变量的引用</li>
-<li>注意事项1</li>
-<li>注意事项2
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank"><a href="https://icp.gov.moe/?keyword=20230052" target="_blank">萌ICP备20230052号</a> </a>
-  </div>
-
-<div class="copyright">
-  &copy; 2022 – 
-  <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa-regular fa-snowflake"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">huwahuwahuwa</span>
-</div>
-<div class="wordcount">
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-line"></i>
-    </span>
-      <span>站点总字数：</span>
-    <span title="站点总字数">16k</span>
-  </span>
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-      <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">15 分钟</span>
-  </span>
-</div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-<span id="sitetime"></span>
-<script language=javascript>
-	function siteTime(){
-		window.setTimeout("siteTime()", 1000);
-		var seconds = 1000;
-		var minutes = seconds * 60;
-		var hours = minutes * 60;
-		var days = hours * 24;
-		var years = days * 365;
-		var today = new Date();
-		var todayYear = today.getFullYear();
-		var todayMonth = today.getMonth()+1;
-		var todayDate = today.getDate();
-		var todayHour = today.getHours();
-		var todayMinute = today.getMinutes();
-		var todaySecond = today.getSeconds();
-		/* 
-		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-		year - 作为date对象的年份，为4位年份值
-		month - 0-11之间的整数，做为date对象的月份
-		day - 1-31之间的整数，做为date对象的天数
-		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-		minutes - 0-59之间的整数，做为date对象的分钟数
-		seconds - 0-59之间的整数，做为date对象的秒数
-		microseconds - 0-999之间的整数，做为date对象的毫秒数
-        */
-		var t1 = Date.UTC(2022,12,18,20,00,00); //UTC零时，即北京时间的八时（东八区）。网站真正的建立时间是2022年12月18日20：00：00
-		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
-		var diff = t2-t1;
-		var diffYears = Math.floor(diff/years);
-		var diffDays = Math.floor((diff/days)-diffYears*365);
-		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
-		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
-		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
-	}
-	siteTime();
-</script>
-
-
-
-    </div>
-  </footer>
-
-  
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
-<script src="/js/third-party/search/local-search.js"></script>
-
-
-
-
-  <script src="/js/third-party/pace.js"></script>
-
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-<script src="/js/third-party/comments/livere.js"></script>
-
-<!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div><script defer src="/js/light.js"></script><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async data-pjax src="/js/txmap.js"></script><script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script defer src="/js/lunar.js"></script><script defer src="/js/day.js"></script><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async data-pjax src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><script async data-pjax src="/js/newYear.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
     var parent = document.getElementById('recent-posts');
     var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="http://ultramarine.cc/categories/C语言/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1"><i class="fa-solid fa-c"></i> C语言学习 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://ultramarine.cc/categories/更新/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1"><i class="fa fa-rocket" aria-hidden="true"></i> 站点更新 (3)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://ultramarine.cc/categories/随想/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1"><i class="fa-solid fa-feather-pointed"></i> 胡思乱想 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://ultramarine.cc/categories/园艺/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1"><i class="fa-solid fa-seedling"></i> 园艺小屋 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><a class="magnet_link_more"  href="http://ultramarine.cc/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
     console.log('已挂载magnet')
     parent.insertAdjacentHTML("afterbegin",child)}
      </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #8abcd1}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
     <style></style><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var qweather_key = '965d1139374c4567acce3051dcf9150c';
+  var gaud_map_key = '1a2591943fb0afb2662f1de669c5320e';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '113.34532,23.15624';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><script data-pjax>
   function butterfly_footer_beautify_injector_config(){
     var parent_div_git = document.getElementById('footer-wrap');
-    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v6.2.0" title=""><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.3.1" title=""><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" data-title="本站采用多线部署，主线路托管于Vercel" title=""><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://dashboard.4everland.org/" style="margin-inline:5px" data-title="本站采用多线部署，备用线路托管于4EVERLAND" title=""><img src="https://img.shields.io/badge/Hosted-4EVERLAND-22DDDD?style=flat&amp;logo=IPFS" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
+    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v6.2.0" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.3.1" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" data-title="本站采用多线部署，主线路托管于Vercel" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://dashboard.4everland.org/" style="margin-inline:5px" data-title="本站采用多线部署，备用线路托管于4EVERLAND" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-4EVERLAND-22DDDD?style=flat&amp;logo=IPFS" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
     console.log('已挂载butterfly_footer_beautify')
     parent_div_git.insertAdjacentHTML("beforeend",item_html)
     }
@@ -956,7 +404,7 @@
   </script><script async src="/js/runtime.js"></script><script data-pjax>
   function butterfly_swiper_injector_config(){
     var parent_div_git = document.getElementById('recent-posts');
-    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/01/28/C语言基础：结构体/" alt=""><img width="48" height="48" src="https://picgo.ultramarine.cc/img/c1cover.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-28</span><a class="blog-slider__title" href="2023/01/28/C语言基础：结构体/" alt="">C语言基础：结构体</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2023/01/28/C语言基础：结构体/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/01/26/角堇-三色堇种植/" alt=""><img width="48" height="48" src="https://picgo.ultramarine.cc/img/garden21.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-26</span><a class="blog-slider__title" href="2023/01/26/角堇-三色堇种植/" alt="">角堇&amp;三色堇种植</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2023/01/26/角堇-三色堇种植/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/12/21/建站小记/" alt=""><img width="48" height="48" src="https://picgo.ultramarine.cc/img/D14320379182C34F1421621570CC0D05.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-12-21</span><a class="blog-slider__title" href="2022/12/21/建站小记/" alt="">建站小记</a><div class="blog-slider__text">本站是博主的个人博客，基于Hexo搭建，采用Butterfly主题，网站的文件托管在Github仓库和Vercel上。在搭建过程中主要参考了[Fomalhaut🥝](https://www.fomal.cc) 的文章及发布在B站的同步视频。</div><a class="blog-slider__button" href="2022/12/21/建站小记/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/01/28/C语言基础：结构体/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/c1cover.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-28</span><a class="blog-slider__title" href="2023/01/28/C语言基础：结构体/" alt="">C语言基础：结构体</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2023/01/28/C语言基础：结构体/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/01/26/角堇-三色堇种植/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/garden21.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-26</span><a class="blog-slider__title" href="2023/01/26/角堇-三色堇种植/" alt="">角堇&amp;三色堇种植</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2023/01/26/角堇-三色堇种植/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/12/21/建站小记/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo.ultramarine.cc/img/D14320379182C34F1421621570CC0D05.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-12-21</span><a class="blog-slider__title" href="2022/12/21/建站小记/" alt="">建站小记</a><div class="blog-slider__text">本站是博主的个人博客，基于Hexo搭建，采用Butterfly主题，网站的文件托管在Github仓库和Vercel上。在搭建过程中主要参考了[Fomalhaut🥝](https://www.fomal.cc) 的文章及发布在B站的同步视频。</div><a class="blog-slider__button" href="2022/12/21/建站小记/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
     console.log('已挂载butterfly_swiper')
     parent_div_git.insertAdjacentHTML("afterbegin",item_html)
     }
@@ -977,5 +425,4 @@
   else if (epage === cpage){
     butterfly_swiper_injector_config();
   }
-  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body>
-</html>
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
