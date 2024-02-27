@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Ciallo</title>
+  <title>Ultramarine-Blog</title>
   
-  <subtitle>Ciallo.tech</subtitle>
-  <link href="http://ciallo.tech/atom.xml" rel="self"/>
   
-  <link href="http://ciallo.tech/"/>
+  <link href="http://ultramarine.cc/atom.xml" rel="self"/>
+  
+  <link href="http://ultramarine.cc/"/>
   <updated>2023-11-04T08:15:17.802Z</updated>
-  <id>http://ciallo.tech/</id>
+  <id>http://ultramarine.cc/</id>
   
   <author>
-    <name>huaizai</name>
+    <name>huwahuwahuwa</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Matlab学习笔记</title>
-    <link href="http://ciallo.tech/2023/11/04/Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://ciallo.tech/2023/11/04/Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="http://ultramarine.cc/2023/11/04/Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://ultramarine.cc/2023/11/04/Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2023-11-04T08:15:17.000Z</published>
     <updated>2023-11-04T08:15:17.802Z</updated>
     
@@ -31,8 +31,8 @@
   
   <entry>
     <title>《消费社会》读书笔记-增长的恶性循环</title>
-    <link href="http://ciallo.tech/2023/08/29/%E3%80%8A%E6%B6%88%E8%B4%B9%E7%A4%BE%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%A2%9E%E9%95%BF%E7%9A%84%E6%81%B6%E6%80%A7%E5%BE%AA%E7%8E%AF/"/>
-    <id>http://ciallo.tech/2023/08/29/%E3%80%8A%E6%B6%88%E8%B4%B9%E7%A4%BE%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%A2%9E%E9%95%BF%E7%9A%84%E6%81%B6%E6%80%A7%E5%BE%AA%E7%8E%AF/</id>
+    <link href="http://ultramarine.cc/2023/08/29/%E3%80%8A%E6%B6%88%E8%B4%B9%E7%A4%BE%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%A2%9E%E9%95%BF%E7%9A%84%E6%81%B6%E6%80%A7%E5%BE%AA%E7%8E%AF/"/>
+    <id>http://ultramarine.cc/2023/08/29/%E3%80%8A%E6%B6%88%E8%B4%B9%E7%A4%BE%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%A2%9E%E9%95%BF%E7%9A%84%E6%81%B6%E6%80%A7%E5%BE%AA%E7%8E%AF/</id>
     <published>2023-08-29T06:11:33.000Z</published>
     <updated>2023-08-29T06:13:15.029Z</updated>
     
@@ -55,8 +55,8 @@
   
   <entry>
     <title>角堇-三色堇种植-2</title>
-    <link href="http://ciallo.tech/2023/04/04/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D-2/"/>
-    <id>http://ciallo.tech/2023/04/04/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D-2/</id>
+    <link href="http://ultramarine.cc/2023/04/04/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D-2/"/>
+    <id>http://ultramarine.cc/2023/04/04/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D-2/</id>
     <published>2023-04-04T06:30:17.000Z</published>
     <updated>2023-04-04T07:18:15.089Z</updated>
     
@@ -75,14 +75,14 @@
     
     
     
-    <category term="园艺" scheme="http://ciallo.tech/tags/%E5%9B%AD%E8%89%BA/"/>
+    <category term="园艺" scheme="http://ultramarine.cc/tags/%E5%9B%AD%E8%89%BA/"/>
     
   </entry>
   
   <entry>
     <title>年轻人的第一款艺术家水彩颜料——荷尔拜英</title>
-    <link href="http://ciallo.tech/2023/04/03/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%B0%B4%E5%BD%A9%E9%A2%9C%E6%96%99%E2%80%94%E2%80%94%E8%8D%B7%E5%B0%94%E6%8B%9C%E8%8B%B1/"/>
-    <id>http://ciallo.tech/2023/04/03/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%B0%B4%E5%BD%A9%E9%A2%9C%E6%96%99%E2%80%94%E2%80%94%E8%8D%B7%E5%B0%94%E6%8B%9C%E8%8B%B1/</id>
+    <link href="http://ultramarine.cc/2023/04/03/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%B0%B4%E5%BD%A9%E9%A2%9C%E6%96%99%E2%80%94%E2%80%94%E8%8D%B7%E5%B0%94%E6%8B%9C%E8%8B%B1/"/>
+    <id>http://ultramarine.cc/2023/04/03/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%B0%B4%E5%BD%A9%E9%A2%9C%E6%96%99%E2%80%94%E2%80%94%E8%8D%B7%E5%B0%94%E6%8B%9C%E8%8B%B1/</id>
     <published>2023-04-03T13:38:22.000Z</published>
     <updated>2023-04-04T07:41:15.715Z</updated>
     
@@ -94,14 +94,14 @@
     
     
     
-    <category term="测评" scheme="http://ciallo.tech/tags/%E6%B5%8B%E8%AF%84/"/>
+    <category term="测评" scheme="http://ultramarine.cc/tags/%E6%B5%8B%E8%AF%84/"/>
     
   </entry>
   
   <entry>
     <title>3M的X5A耳罩初测评</title>
-    <link href="http://ciallo.tech/2023/04/03/3M%E7%9A%84X5A%E8%80%B3%E7%BD%A9%E5%88%9D%E6%B5%8B%E8%AF%84/"/>
-    <id>http://ciallo.tech/2023/04/03/3M%E7%9A%84X5A%E8%80%B3%E7%BD%A9%E5%88%9D%E6%B5%8B%E8%AF%84/</id>
+    <link href="http://ultramarine.cc/2023/04/03/3M%E7%9A%84X5A%E8%80%B3%E7%BD%A9%E5%88%9D%E6%B5%8B%E8%AF%84/"/>
+    <id>http://ultramarine.cc/2023/04/03/3M%E7%9A%84X5A%E8%80%B3%E7%BD%A9%E5%88%9D%E6%B5%8B%E8%AF%84/</id>
     <published>2023-04-03T12:44:48.000Z</published>
     <updated>2023-04-04T07:41:33.811Z</updated>
     
@@ -113,14 +113,14 @@
     
     
     
-    <category term="测评" scheme="http://ciallo.tech/tags/%E6%B5%8B%E8%AF%84/"/>
+    <category term="测评" scheme="http://ultramarine.cc/tags/%E6%B5%8B%E8%AF%84/"/>
     
   </entry>
   
   <entry>
     <title>C语言基础：结构体</title>
-    <link href="http://ciallo.tech/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/"/>
-    <id>http://ciallo.tech/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/</id>
+    <link href="http://ultramarine.cc/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/"/>
+    <id>http://ultramarine.cc/2023/01/28/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93/</id>
     <published>2023-01-28T14:43:20.000Z</published>
     <updated>2023-04-04T07:20:48.798Z</updated>
     
@@ -141,17 +141,17 @@
     
     
     
-    <category term="C语言" scheme="http://ciallo.tech/categories/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="C语言" scheme="http://ultramarine.cc/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="C语言" scheme="http://ciallo.tech/tags/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="C语言" scheme="http://ultramarine.cc/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
   <entry>
     <title>角堇&amp;三色堇种植</title>
-    <link href="http://ciallo.tech/2023/01/26/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D/"/>
-    <id>http://ciallo.tech/2023/01/26/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D/</id>
+    <link href="http://ultramarine.cc/2023/01/26/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D/"/>
+    <id>http://ultramarine.cc/2023/01/26/%E8%A7%92%E5%A0%87-%E4%B8%89%E8%89%B2%E5%A0%87%E7%A7%8D%E6%A4%8D/</id>
     <published>2023-01-26T14:33:23.000Z</published>
     <updated>2023-04-04T07:20:46.466Z</updated>
     
@@ -176,17 +176,17 @@
     
     
     
-    <category term="园艺" scheme="http://ciallo.tech/categories/%E5%9B%AD%E8%89%BA/"/>
+    <category term="园艺" scheme="http://ultramarine.cc/categories/%E5%9B%AD%E8%89%BA/"/>
     
     
-    <category term="园艺" scheme="http://ciallo.tech/tags/%E5%9B%AD%E8%89%BA/"/>
+    <category term="园艺" scheme="http://ultramarine.cc/tags/%E5%9B%AD%E8%89%BA/"/>
     
   </entry>
   
   <entry>
     <title>耶，复活了</title>
-    <link href="http://ciallo.tech/2023/01/22/%E8%80%B6%EF%BC%8C%E5%A4%8D%E6%B4%BB%E4%BA%86/"/>
-    <id>http://ciallo.tech/2023/01/22/%E8%80%B6%EF%BC%8C%E5%A4%8D%E6%B4%BB%E4%BA%86/</id>
+    <link href="http://ultramarine.cc/2023/01/22/%E8%80%B6%EF%BC%8C%E5%A4%8D%E6%B4%BB%E4%BA%86/"/>
+    <id>http://ultramarine.cc/2023/01/22/%E8%80%B6%EF%BC%8C%E5%A4%8D%E6%B4%BB%E4%BA%86/</id>
     <published>2023-01-22T03:47:41.000Z</published>
     <updated>2023-04-04T07:19:16.309Z</updated>
     
@@ -202,8 +202,8 @@
   
   <entry>
     <title>关于网站图片目前无法加载的解释</title>
-    <link href="http://ciallo.tech/2023/01/21/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E5%9B%BE%E7%89%87%E7%9B%AE%E5%89%8D%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%A7%A3%E5%86%B3/"/>
-    <id>http://ciallo.tech/2023/01/21/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E5%9B%BE%E7%89%87%E7%9B%AE%E5%89%8D%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%A7%A3%E5%86%B3/</id>
+    <link href="http://ultramarine.cc/2023/01/21/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E5%9B%BE%E7%89%87%E7%9B%AE%E5%89%8D%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%A7%A3%E5%86%B3/"/>
+    <id>http://ultramarine.cc/2023/01/21/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E5%9B%BE%E7%89%87%E7%9B%AE%E5%89%8D%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%A7%A3%E5%86%B3/</id>
     <published>2023-01-21T09:10:29.000Z</published>
     <updated>2023-04-04T07:21:15.640Z</updated>
     
@@ -214,17 +214,17 @@
     
     
     
-    <category term="更新" scheme="http://ciallo.tech/categories/%E6%9B%B4%E6%96%B0/"/>
+    <category term="更新" scheme="http://ultramarine.cc/categories/%E6%9B%B4%E6%96%B0/"/>
     
     
-    <category term="更新" scheme="http://ciallo.tech/tags/%E6%9B%B4%E6%96%B0/"/>
+    <category term="更新" scheme="http://ultramarine.cc/tags/%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>整点薯条-FALSEKNEES漫画分享</title>
-    <link href="http://ciallo.tech/2023/01/06/%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-FALSEKNEES%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB/"/>
-    <id>http://ciallo.tech/2023/01/06/%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-FALSEKNEES%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB/</id>
+    <link href="http://ultramarine.cc/2023/01/06/%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-FALSEKNEES%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB/"/>
+    <id>http://ultramarine.cc/2023/01/06/%E6%95%B4%E7%82%B9%E8%96%AF%E6%9D%A1-FALSEKNEES%E6%BC%AB%E7%94%BB%E5%88%86%E4%BA%AB/</id>
     <published>2023-01-06T06:08:48.000Z</published>
     <updated>2023-04-04T07:21:22.816Z</updated>
     
@@ -239,14 +239,14 @@
     
     
     
-    <category term="图库" scheme="http://ciallo.tech/tags/%E5%9B%BE%E5%BA%93/"/>
+    <category term="图库" scheme="http://ultramarine.cc/tags/%E5%9B%BE%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>今天冬至，生活还得继续</title>
-    <link href="http://ciallo.tech/2022/12/22/%E4%BB%8A%E5%A4%A9%E5%86%AC%E8%87%B3%EF%BC%8C%E7%94%9F%E6%B4%BB%E8%BF%98%E5%BE%97%E7%BB%A7%E7%BB%AD/"/>
-    <id>http://ciallo.tech/2022/12/22/%E4%BB%8A%E5%A4%A9%E5%86%AC%E8%87%B3%EF%BC%8C%E7%94%9F%E6%B4%BB%E8%BF%98%E5%BE%97%E7%BB%A7%E7%BB%AD/</id>
+    <link href="http://ultramarine.cc/2022/12/22/%E4%BB%8A%E5%A4%A9%E5%86%AC%E8%87%B3%EF%BC%8C%E7%94%9F%E6%B4%BB%E8%BF%98%E5%BE%97%E7%BB%A7%E7%BB%AD/"/>
+    <id>http://ultramarine.cc/2022/12/22/%E4%BB%8A%E5%A4%A9%E5%86%AC%E8%87%B3%EF%BC%8C%E7%94%9F%E6%B4%BB%E8%BF%98%E5%BE%97%E7%BB%A7%E7%BB%AD/</id>
     <published>2022-12-21T16:41:01.000Z</published>
     <updated>2023-01-22T04:29:21.889Z</updated>
     
@@ -257,17 +257,17 @@
     
     
     
-    <category term="随想" scheme="http://ciallo.tech/categories/%E9%9A%8F%E6%83%B3/"/>
+    <category term="随想" scheme="http://ultramarine.cc/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
-    <category term="随想" scheme="http://ciallo.tech/tags/%E9%9A%8F%E6%83%B3/"/>
+    <category term="随想" scheme="http://ultramarine.cc/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title>建站小记</title>
-    <link href="http://ciallo.tech/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/"/>
-    <id>http://ciallo.tech/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</id>
+    <link href="http://ultramarine.cc/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/"/>
+    <id>http://ultramarine.cc/2022/12/21/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</id>
     <published>2022-12-21T07:59:59.000Z</published>
     <updated>2023-04-04T07:19:03.982Z</updated>
     
@@ -278,17 +278,17 @@
     
     
     
-    <category term="更新" scheme="http://ciallo.tech/categories/%E6%9B%B4%E6%96%B0/"/>
+    <category term="更新" scheme="http://ultramarine.cc/categories/%E6%9B%B4%E6%96%B0/"/>
     
     
-    <category term="更新" scheme="http://ciallo.tech/tags/%E6%9B%B4%E6%96%B0/"/>
+    <category term="更新" scheme="http://ultramarine.cc/tags/%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://ciallo.tech/2022/12/21/hello-world/"/>
-    <id>http://ciallo.tech/2022/12/21/hello-world/</id>
+    <link href="http://ultramarine.cc/2022/12/21/hello-world/"/>
+    <id>http://ultramarine.cc/2022/12/21/hello-world/</id>
     <published>2022-12-21T02:04:55.869Z</published>
     <updated>2023-01-22T04:29:07.422Z</updated>
     
@@ -302,10 +302,10 @@
     
     
     
-    <category term="更新" scheme="http://ciallo.tech/categories/%E6%9B%B4%E6%96%B0/"/>
+    <category term="更新" scheme="http://ultramarine.cc/categories/%E6%9B%B4%E6%96%B0/"/>
     
     
-    <category term="更新" scheme="http://ciallo.tech/tags/%E6%9B%B4%E6%96%B0/"/>
+    <category term="更新" scheme="http://ultramarine.cc/tags/%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
